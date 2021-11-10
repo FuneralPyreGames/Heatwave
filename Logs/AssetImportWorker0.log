@@ -7741,3 +7741,33 @@ Received Import Request.
   path: Assets/URP Settings/URP-Balanced.asset
   artifactKey: Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/URP Settings/URP-Balanced.asset using Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '075c3a1583539cbaaae1dad5c466906a') in 0.003248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.561905 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset
+  artifactKey: Guid(41439944d30ece34e96484bdb6645b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset using Guid(41439944d30ece34e96484bdb6645b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc27af19788ca0968dc9de0fce5f5c3c') in 0.004922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Data/XRSystemData.asset
+  artifactKey: Guid(60e1133243b97e347b653163a8c01b64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Data/XRSystemData.asset using Guid(60e1133243b97e347b653163a8c01b64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e888b25a82524f63a32c29bc009efffc') in 0.002696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.906190 seconds.
+  path: Assets/Prefabs/Laser.prefab
+  artifactKey: Guid(5ae997cb4030b4db6b636cbdf461b506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Laser.prefab using Guid(5ae997cb4030b4db6b636cbdf461b506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bea0681aa60889813ffd6128c18df92d') in 0.020419 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.148737 seconds.
+  path: Assets/TutorialInfo/Readme.asset
+  artifactKey: Guid(977e3020c778ec947b41851d26aa2d43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TutorialInfo/Readme.asset using Guid(977e3020c778ec947b41851d26aa2d43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cce6fff0f48af464beff552dd5925a46') in 0.003621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 49.652846 seconds.
+  path: Assets/URP Settings/URP-Balanced-Renderer.asset
+  artifactKey: Guid(6038a6de9f5e8014c997b7d4f319dcda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP Settings/URP-Balanced-Renderer.asset using Guid(6038a6de9f5e8014c997b7d4f319dcda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10f5ca5940d009a9dd1986443cfc35a9') in 0.002676 seconds 
