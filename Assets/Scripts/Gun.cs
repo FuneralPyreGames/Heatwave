@@ -85,6 +85,10 @@ public class Gun : MonoBehaviour
         {
             CreateLaser(hit.point);
         }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void ShotgunShotColdLevel2()
     {
@@ -97,6 +101,10 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
             CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
         }
     }
     public void ShotgunShotColdLevel1()
@@ -111,15 +119,26 @@ public class Gun : MonoBehaviour
         {
             CreateLaser(hit.point);
         }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void ShotgunShotNeutral()
     {
+        Range = 50f;
+        Damage = 10f;
+        inaccuracyDistance = 0f;
         ammoHandler.DecrementGunAmmo();
         Vector3 shootingDir = GetShootingDirection();
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
             CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
         }
     }    
     //Being hot will give the gun
@@ -137,6 +156,10 @@ public class Gun : MonoBehaviour
         {
             CreateLaser(hit.point);
         }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void ShotgunShotHotLevel2()
     {
@@ -149,6 +172,10 @@ public class Gun : MonoBehaviour
         {
             CreateLaser(hit.point);
         }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void ShotgunShotHotLevel3()
     {
@@ -160,6 +187,10 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
             CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
         }
     }
     #endregion

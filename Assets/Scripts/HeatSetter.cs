@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDataController : MonoBehaviour
+public class HeatSetter : MonoBehaviour
 {
     public int currentHeat;
     // -3 is Cold Level 3
@@ -12,10 +12,4 @@ public class PlayerDataController : MonoBehaviour
     // 1 is Hot Level 1
     // 2 is Hot Level 2
     // 3 is Hot Level 3
-    private void OnTriggerEnter(Collider other)
-    {
-        HeatSetter hs = other.GetComponent<HeatSetter>();
-        currentHeat = hs.currentHeat;
-        print(currentHeat);
-    }
 }
