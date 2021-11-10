@@ -12,28 +12,22 @@ public class Gun : MonoBehaviour
     [SerializeField] float Damage = 10f;
     [SerializeField] float fireRate = 5f;
     [SerializeField] float reloadTime;
-    [SerializeField] float innacuracyDistance = 5f;
+    [SerializeField] float inaccuracyDistance = 0f;
     [SerializeField] float fadeDuration = 0.3f;
     [Header("Shotgun Settings")]
     [SerializeField] bool rapidFire = true;
-    [Header("Ammo")]
-    [SerializeField] int maxInGunAmmo = 20;
-    [SerializeField] int currentInGunAmmo;
-    [SerializeField] int maxCarryAmmo = 100;
-    [SerializeField] int currentCarryAmmo;
-    [SerializeField] int startingInGunAmmo;
-    [SerializeField] int startingCarryAmmo;
     [Header("Assignables")]
     [SerializeField] GameObject laser;
     [SerializeField] PlayerDataController playerDataController;
     [SerializeField] Transform muzzle;
+    [SerializeField] AmmoHandler ammoHandler;
     [Header("Not In Inspector")]
     Transform playerCamera;
     void Awake()
     {
         playerCamera = Camera.main.transform;
-        currentCarryAmmo = startingCarryAmmo;
-        currentInGunAmmo = startingInGunAmmo;
+        ammoHandler.currentCarryAmmo = ammoHandler.startingCarryAmmo;
+        ammoHandler.currentInGunAmmo = ammoHandler.startingInGunAmmo;
     }
     public void Shoot()
     {
@@ -75,21 +69,16 @@ public class Gun : MonoBehaviour
                 break;
         }
     }
+    //Being cold will give the gun
+    //1. An increased range of inaccuracy
+    //2. Lower levels of damage
+    //3. A longer range
     public void ShotgunShotColdLevel3()
     {
-
-    }
-    public void ShotgunShotColdLevel2()
-    {
-
-    }
-    public void ShotgunShotColdLevel1()
-    {
-
-    }
-    public void ShotgunShotNeutral()
-    {
-        currentInGunAmmo -= 1;
+        Range = 65f;
+        Damage = 5f;
+        inaccuracyDistance = 1.5f;
+        ammoHandler.DecrementGunAmmo();
         Vector3 shootingDir = GetShootingDirection();
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
@@ -97,24 +86,88 @@ public class Gun : MonoBehaviour
             CreateLaser(hit.point);
         }
     }
+    public void ShotgunShotColdLevel2()
+    {
+        Range = 60f;
+        Damage = 7f;
+        inaccuracyDistance = 1f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            CreateLaser(hit.point);
+        }
+    }
+    public void ShotgunShotColdLevel1()
+    {
+        Range = 55f;
+        Damage = 9f;
+        inaccuracyDistance = .5f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            CreateLaser(hit.point);
+        }
+    }
+    public void ShotgunShotNeutral()
+    {
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            CreateLaser(hit.point);
+        }
+    }    
+    //Being hot will give the gun
+    //1. A small chance to not fire
+    //2. Increased damage
+    //3. A shorter range
     public void ShotgunShotHotLevel1()
     {
-
+        Range = 45f;
+        Damage = 11f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            CreateLaser(hit.point);
+        }
     }
     public void ShotgunShotHotLevel2()
     {
-
+        Range = 40f;
+        Damage = 13f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            CreateLaser(hit.point);
+        }
     }
     public void ShotgunShotHotLevel3()
     {
-
+        Range = 35f;
+        Damage = 15f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            CreateLaser(hit.point);
+        }
     }
     #endregion
     #region GeneralFunctions
     Vector3 GetShootingDirection()
     {
         Vector3 targetPos = playerCamera.position + playerCamera.forward * Range;
-        targetPos = new Vector3(targetPos.x + Random.Range(-innacuracyDistance, innacuracyDistance), targetPos.y + Random.Range(-innacuracyDistance, innacuracyDistance), targetPos.z + Random.Range(-innacuracyDistance, innacuracyDistance));
+        targetPos = new Vector3(targetPos.x + Random.Range(-inaccuracyDistance, inaccuracyDistance), targetPos.y + Random.Range(-inaccuracyDistance, inaccuracyDistance), targetPos.z + Random.Range(-inaccuracyDistance, inaccuracyDistance));
         Vector3 direction = targetPos - playerCamera.position;
         return direction.normalized;
     }

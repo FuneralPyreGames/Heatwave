@@ -225,18 +225,31 @@ MonoBehaviour:
   Damage: 10
   fireRate: 5
   reloadTime: 0
-  innacuracyDistance: 0
+  inaccuracyDistance: 5
   fadeDuration: 0.3
   rapidFire: 0
+  laser: {fileID: 821174039453435963, guid: 5ae997cb4030b4db6b636cbdf461b506, type: 3}
+  playerDataController: {fileID: 1184604023}
+  muzzle: {fileID: 2037983553}
+  ammoHandler: {fileID: 49139392}
+--- !u!114 &49139392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49139390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5efd827b91b5c42aeb590f9ff3c451bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   maxInGunAmmo: 20
   currentInGunAmmo: 0
   maxCarryAmmo: 100
   currentCarryAmmo: 0
-  startingInGunAmmo: 20
-  startingCarryAmmo: 100
-  laser: {fileID: 821174039453435963, guid: 5ae997cb4030b4db6b636cbdf461b506, type: 3}
-  playerDataController: {fileID: 1184604023}
-  muzzle: {fileID: 2037983553}
+  startingInGunAmmo: 0
+  startingCarryAmmo: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
