@@ -22,6 +22,8 @@ public class InputManager : MonoBehaviour
         movementActions.Jump.performed += _ => movePlayer.OnJumpPressed();
         movementActions.LookX.performed += ctx => lookInput.x = ctx.ReadValue<float>();
         movementActions.LookY.performed += ctx => lookInput.y = ctx.ReadValue<float>();
+        movementActions.Sprint.started += _ => StartSprint();
+        movementActions.Sprint.canceled += _ => EndSprint();
         gunplayActions.Shoot.performed += _ => gun.Shoot();
     }
     void Update()
@@ -29,6 +31,14 @@ public class InputManager : MonoBehaviour
         //This is where input that requires context is handled
         movePlayer.RecieveInput(movementInput);
         look.RecieveInput(lookInput);
+    }
+    void StartSprint()
+    {
+        movePlayer.StartSprint();
+    }
+    void EndSprint()
+    {
+        movePlayer.StopSprint();
     }
     void OnEnable()
     {

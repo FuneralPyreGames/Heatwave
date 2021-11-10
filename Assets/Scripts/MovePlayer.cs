@@ -42,4 +42,12 @@ public class MovePlayer : MonoBehaviour
     {
         Jump = true;
     }
+    public void StartSprint()
+    {
+        speed = 20f;
+    }
+    public void StopSprint()
+    {
+        speed = 10f;
+    }
 }

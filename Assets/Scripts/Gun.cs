@@ -75,7 +75,7 @@ public class Gun : MonoBehaviour
     //3. A longer range
     public void ShotgunShotColdLevel3()
     {
-        Range = 65f;
+        Range = 40;
         Damage = 5f;
         inaccuracyDistance = 1.5f;
         ammoHandler.DecrementGunAmmo();
@@ -83,6 +83,10 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -92,7 +96,7 @@ public class Gun : MonoBehaviour
     }
     public void ShotgunShotColdLevel2()
     {
-        Range = 60f;
+        Range = 35f;
         Damage = 7f;
         inaccuracyDistance = 1f;
         ammoHandler.DecrementGunAmmo();
@@ -100,6 +104,10 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -109,7 +117,7 @@ public class Gun : MonoBehaviour
     }
     public void ShotgunShotColdLevel1()
     {
-        Range = 55f;
+        Range = 30f;
         Damage = 9f;
         inaccuracyDistance = .5f;
         ammoHandler.DecrementGunAmmo();
@@ -117,6 +125,10 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -126,7 +138,7 @@ public class Gun : MonoBehaviour
     }
     public void ShotgunShotNeutral()
     {
-        Range = 50f;
+        Range = 25f;
         Damage = 10f;
         inaccuracyDistance = 0f;
         ammoHandler.DecrementGunAmmo();
@@ -134,6 +146,10 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -147,13 +163,17 @@ public class Gun : MonoBehaviour
     //3. A shorter range
     public void ShotgunShotHotLevel1()
     {
-        Range = 45f;
+        Range = 20f;
         Damage = 11f;
         ammoHandler.DecrementGunAmmo();
         Vector3 shootingDir = GetShootingDirection();
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -163,13 +183,17 @@ public class Gun : MonoBehaviour
     }
     public void ShotgunShotHotLevel2()
     {
-        Range = 40f;
+        Range = 15f;
         Damage = 13f;
         ammoHandler.DecrementGunAmmo();
         Vector3 shootingDir = GetShootingDirection();
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -179,13 +203,17 @@ public class Gun : MonoBehaviour
     }
     public void ShotgunShotHotLevel3()
     {
-        Range = 35f;
+        Range = 10f;
         Damage = 15f;
         ammoHandler.DecrementGunAmmo();
         Vector3 shootingDir = GetShootingDirection();
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
         {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -204,13 +232,14 @@ public class Gun : MonoBehaviour
     }
     void CreateLaser(Vector3 endPos)
     {
-        LineRenderer lr = Instantiate(laser).GetComponent<LineRenderer>();
+        GameObject laserMade = Instantiate(laser);
+        LineRenderer lr = laserMade.GetComponent<LineRenderer>();
         lr.SetPositions(new Vector3[2] { muzzle.position, endPos });
-        StartCoroutine(FadeLaser(lr));
+        StartCoroutine(FadeLaser(lr, laserMade));
     }
     #endregion
     #region GeneralCoroutines
-    IEnumerator FadeLaser(LineRenderer lr)
+    IEnumerator FadeLaser(LineRenderer lr, GameObject laserMade)
     {
         float Alpha = 1;
         while (Alpha > 0)
@@ -220,6 +249,7 @@ public class Gun : MonoBehaviour
             lr.endColor = new Color(lr.endColor.r, lr.endColor.g, lr.endColor.b, Alpha);
             yield return null;
         }
+        Destroy(laserMade);
     }
     #endregion
 }
