@@ -1,0 +1,9 @@
+https://forum.unity.com/threads/released-enemy-ai.852568/
+https://www.youtube.com/watch?v=a1Na540p4gU
+https://www.youtube.com/watch?v=ovEIluVrQjY
+https://sharpcoderblog.com/blog/fps-with-enemy-ai-in-unity-3d
+https://livebook.manning.com/book/unity-in-action/chapter-3/
+https://subscription.packtpub.com/book/game_development/9781782174806/5/ch05lvl1sec43/integrating-an-ai-system-shooter-ai
+https://www.codegrepper.com/code-examples/csharp/how+to+make+a+shooting+enemy+ai+in+c%23
+https://www.youtube.com/watch?v=Of1yrS_CsiI
+https://www.youtube.com/watch?v=dYBOBgfcTgY
