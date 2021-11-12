@@ -165,6 +165,7 @@ public class Gun : MonoBehaviour
     {
         Range = 20f;
         Damage = 11f;
+        inaccuracyDistance = 0f;
         ammoHandler.DecrementGunAmmo();
         Vector3 shootingDir = GetShootingDirection();
         RaycastHit hit;
@@ -185,6 +186,7 @@ public class Gun : MonoBehaviour
     {
         Range = 15f;
         Damage = 13f;
+        inaccuracyDistance = 0f;
         ammoHandler.DecrementGunAmmo();
         Vector3 shootingDir = GetShootingDirection();
         RaycastHit hit;
@@ -205,6 +207,7 @@ public class Gun : MonoBehaviour
     {
         Range = 10f;
         Damage = 15f;
+        inaccuracyDistance = 0f;
         ammoHandler.DecrementGunAmmo();
         Vector3 shootingDir = GetShootingDirection();
         RaycastHit hit;
