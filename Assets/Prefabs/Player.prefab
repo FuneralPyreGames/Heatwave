@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 3956212761304785412}
   - component: {fileID: 3956212761304785414}
   - component: {fileID: 3956212761304785415}
+  - component: {fileID: 4029437278651565414}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -248,6 +249,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHeat: 0
+--- !u!114 &4029437278651565414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956212761304785409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd36f7dcfbe242339d87f4115727815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3956212762561980599
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +466,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3956212762304459724}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3956212762304459696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4190075372853464733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5efd827b91b5c42aeb590f9ff3c451bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInGunAmmo: 20
+  currentInGunAmmo: 0
+  maxCarryAmmo: 100
+  currentCarryAmmo: 0
+  startingInGunAmmo: 0
+  startingCarryAmmo: 0
 --- !u!114 &3956212762304459727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,21 +512,3 @@ MonoBehaviour:
   playerDataController: {fileID: 3956212761304785415}
   muzzle: {fileID: 3956212761122493489}
   ammoHandler: {fileID: 3956212762304459696}
---- !u!114 &3956212762304459696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4190075372853464733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5efd827b91b5c42aeb590f9ff3c451bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxInGunAmmo: 20
-  currentInGunAmmo: 0
-  maxCarryAmmo: 100
-  currentCarryAmmo: 0
-  startingInGunAmmo: 0
-  startingCarryAmmo: 0
