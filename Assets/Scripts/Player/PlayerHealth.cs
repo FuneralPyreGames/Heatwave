@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    int maxHealth = 100;
-    int currentHealth;
+    [SerializeField]float maxHealth = 100;
+    [SerializeField]float currentHealth;
     void Awake()
     {
         currentHealth = maxHealth;
     }
-    public void LoseHealth(int healthToLose)
+    public void LoseHealth(float healthToLose)
     {
         currentHealth -= healthToLose;
         if (currentHealth <= 0)

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1267,6 +1267,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343926470}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1357209003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4105562739466945130, guid: 1add3da2e61a7439382756aa4762bdc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3762909627672661098}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1414491082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,6 +1651,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1911804975}
     m_Modifications:
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: Gun
+      value: 
+      objectReference: {fileID: 1357209003}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: m_Name

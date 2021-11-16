@@ -18,6 +18,8 @@ public class EnemyAI : MonoBehaviour
     public float attackRange;
     public bool playerInSightRange;
     public bool playerInAttackRange;
+    public GameObject Gun;
+    [SerializeField] EnemyGun enemyGun;
     void Awake()
     {
         Player = GameObject.Find("Player").transform;
@@ -77,8 +79,7 @@ public class EnemyAI : MonoBehaviour
         transform.LookAt(Player);
         if (!alreadyAttacked)
         {
-            print("Attack!");
-            //attack code goes here
+            enemyGun.Shoot();
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }

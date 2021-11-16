@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]int maxHealth = 100;
+    [SerializeField]int currentHealth;
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        currentHealth = maxHealth;
     }
 }

@@ -150,6 +150,7 @@ MonoBehaviour:
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
+  enemyGun: {fileID: 3762909628574007102}
 --- !u!114 &3762909628404908829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73cdd8a1d5281417bb19537e4d3025f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1 &3762909628691544030
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,3 +309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e84d3e96c0a49b481ba211ed1293d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeDuration: 0.3
+  Damage: 10
+  laser: {fileID: 821174039453435963, guid: 5ae997cb4030b4db6b636cbdf461b506, type: 3}
+  muzzle: {fileID: 3762909628691544031}
+  inaccuracyDistance: 0
+  Range: 20

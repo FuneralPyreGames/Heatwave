@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3956212760677233623}
   - component: {fileID: 3956212760677233622}
   - component: {fileID: 3956212760677233621}
+  - component: {fileID: 9037421416439346681}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +99,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9037421416439346681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956212760677233619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd36f7dcfbe242339d87f4115727815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1 &3956212761122493488
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,10 +158,9 @@ GameObject:
   - component: {fileID: 3956212761304785412}
   - component: {fileID: 3956212761304785414}
   - component: {fileID: 3956212761304785415}
-  - component: {fileID: 4029437278651565414}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,18 +263,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHeat: 0
---- !u!114 &4029437278651565414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3956212761304785409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd36f7dcfbe242339d87f4115727815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3956212762561980599
 GameObject:
   m_ObjectHideFlags: 0
