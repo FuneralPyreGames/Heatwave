@@ -10,12 +10,12 @@ public class Gun : MonoBehaviour
     [Header("Shot Attributes")]
     [SerializeField] float Range = 50f;
     [SerializeField] float Damage = 10f;
-    [SerializeField] float fireRate = 5f;
+    //[SerializeField] float fireRate = 5f;
     [SerializeField] float reloadTime;
     [SerializeField] float inaccuracyDistance = 0f;
     [SerializeField] float fadeDuration = 0.3f;
     [Header("Shotgun Settings")]
-    [SerializeField] bool rapidFire = true;
+    //[SerializeField] bool rapidFire = true;
     [Header("Assignables")]
     [SerializeField] GameObject laser;
     [SerializeField] PlayerDataController playerDataController;
@@ -87,6 +87,10 @@ public class Gun : MonoBehaviour
             {
                 hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
             }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -107,6 +111,10 @@ public class Gun : MonoBehaviour
             if (hit.collider.GetComponent<DamageableObject>() != null)
             {
                 hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
             }
             CreateLaser(hit.point);
         }
@@ -129,6 +137,10 @@ public class Gun : MonoBehaviour
             {
                 hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
             }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -149,6 +161,10 @@ public class Gun : MonoBehaviour
             if (hit.collider.GetComponent<DamageableObject>() != null)
             {
                 hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
             }
             CreateLaser(hit.point);
         }
@@ -175,6 +191,10 @@ public class Gun : MonoBehaviour
             {
                 hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
             }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -196,6 +216,10 @@ public class Gun : MonoBehaviour
             {
                 hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
             }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
             CreateLaser(hit.point);
         }
         else
@@ -216,6 +240,10 @@ public class Gun : MonoBehaviour
             if (hit.collider.GetComponent<DamageableObject>() != null)
             {
                 hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
             }
             CreateLaser(hit.point);
         }

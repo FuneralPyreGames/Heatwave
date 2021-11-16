@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]float maxHealth = 100;
     [SerializeField]float currentHealth;
+    [SerializeField]UIManager uIManager;
     void Awake()
     {
         currentHealth = maxHealth;
@@ -13,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     public void LoseHealth(float healthToLose)
     {
         currentHealth -= healthToLose;
+        uIManager.UpdateHealthText(currentHealth);
         if (currentHealth <= 0)
         {
             Death();

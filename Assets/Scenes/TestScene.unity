@@ -738,6 +738,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8393090485830103913}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &738629475 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5565817651802994305, guid: 1d827959403bb714fb4d0d5a37e912c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3956212762353073520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &823892834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1166,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8912600966103553874}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1332939246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6799728890291008209, guid: 1d827959403bb714fb4d0d5a37e912c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3956212762353073520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1332939251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332939246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9331646cb5259f1409ffc3bb9af656e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inGunAmmoText: {fileID: 1813831063}
+  carryAmmoText: {fileID: 738629475}
+  healthText: {fileID: 1667334512}
 --- !u!1 &1343926470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,12 +1300,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343926470}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1357209003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4105562739466945130, guid: 1add3da2e61a7439382756aa4762bdc1,
-    type: 3}
-  m_PrefabInstance: {fileID: 3762909627672661098}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1414491082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1350,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7102294185442882479}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1667334512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4258884055149642636, guid: 1d827959403bb714fb4d0d5a37e912c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3956212762353073520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1813831063 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5386351613461065861, guid: 1d827959403bb714fb4d0d5a37e912c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3956212762353073520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1873761165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,11 +1702,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1911804975}
     m_Modifications:
-    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
-        type: 3}
-      propertyPath: Gun
-      value: 
-      objectReference: {fileID: 1357209003}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: m_Name
@@ -2045,6 +2091,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 9037421416439346681, guid: 1d827959403bb714fb4d0d5a37e912c7,
+        type: 3}
+      propertyPath: uIManager
+      value: 
+      objectReference: {fileID: 1332939251}
+    - target: {fileID: 9037421416439346681, guid: 1d827959403bb714fb4d0d5a37e912c7,
+        type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 1332939251}
     - target: {fileID: 9050504533373485076, guid: 1d827959403bb714fb4d0d5a37e912c7,
         type: 3}
       propertyPath: m_Layer

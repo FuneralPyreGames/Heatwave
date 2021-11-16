@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField]int maxHealth = 100;
-    [SerializeField]int currentHealth;
+    [SerializeField] float maxHealth = 100;
+    [SerializeField] float currentHealth;
     void Awake()
     {
         currentHealth = maxHealth;
+    }
+    public void LoseHealth(float healthToLose)
+    {
+        currentHealth -= healthToLose;
+        if (currentHealth <= 0)
+        {
+            Death();
+        }
+    }
+    public void Death()
+    {
+        Destroy(gameObject);
     }
 }

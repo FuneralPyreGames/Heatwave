@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3762909628404908829}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd253338f76d14dc8ac2e94bb134e10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Agent: {fileID: 0}
+  Agent: {fileID: 3762909628404908819}
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -145,11 +145,12 @@ MonoBehaviour:
     m_Bits: 64
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 2
   sightRange: 20
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
+  Gun: {fileID: 4105562739466945130}
   enemyGun: {fileID: 3762909628574007102}
 --- !u!114 &3762909628404908829
 MonoBehaviour:
