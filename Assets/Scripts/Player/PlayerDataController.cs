@@ -14,8 +14,12 @@ public class PlayerDataController : MonoBehaviour
     // 3 is Hot Level 3
     private void OnTriggerEnter(Collider other)
     {
-        HeatSetter hs = other.GetComponent<HeatSetter>();
-        currentHeat = hs.currentHeat;
-        print(currentHeat);
+        if (other.gameObject.tag == "HeatSetters")
+        {
+            HeatSetter hs = other.GetComponent<HeatSetter>();
+            currentHeat = hs.currentHeat;
+            print(currentHeat);
+        }
+
     }
 }

@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateCarryAmmoText(int carryAmmo)
     {
-        inGunAmmoText.text = "Current Carry Ammo = ";
-        inGunAmmoText.text += carryAmmo;
+        carryAmmoText.text = "Current Carry Ammo = ";
+        carryAmmoText.text += carryAmmo;
     }
 }

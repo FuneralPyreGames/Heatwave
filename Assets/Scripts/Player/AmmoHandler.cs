@@ -11,6 +11,14 @@ public class AmmoHandler : MonoBehaviour
     public int startingInGunAmmo;
     public int startingCarryAmmo;
     [SerializeField] UIManager uIManager;
+    public bool CheckAmmo()
+    {
+        if (currentInGunAmmo > 0)
+        {
+            return true;
+        }
+        return false;
+    }
     public void DecrementGunAmmo()
     {
         currentInGunAmmo -= 1;
@@ -22,11 +30,15 @@ public class AmmoHandler : MonoBehaviour
         {
             StartCoroutine(WaitToReloadOne());
         }
-        else if (currentCarryAmmo < maxInGunAmmo)
+        else if (currentCarryAmmo < maxInGunAmmo && currentCarryAmmo > 0)
         {
             int ammoToLoad = currentCarryAmmo;
             currentCarryAmmo = 0;
             StartCoroutine(WaitToReloadTwo(ammoToLoad));
+        }
+        else if (currentCarryAmmo == 0)
+        {
+            currentCarryAmmo = 0;
         }
     }
     IEnumerator WaitToReloadOne()
@@ -35,6 +47,7 @@ public class AmmoHandler : MonoBehaviour
         currentCarryAmmo -= maxInGunAmmo;
         currentInGunAmmo += maxInGunAmmo;
         print("Reloaded");
+        print(currentCarryAmmo);
         uIManager.UpdateCarryAmmoText(currentCarryAmmo);
         uIManager.UpdateInGunAmmoText(currentInGunAmmo);
     }
@@ -43,6 +56,7 @@ public class AmmoHandler : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         currentInGunAmmo += ammoToReload;
         print("Reloaded");
+        print(currentCarryAmmo);
         uIManager.UpdateCarryAmmoText(currentCarryAmmo);
         uIManager.UpdateInGunAmmoText(currentInGunAmmo);
     }

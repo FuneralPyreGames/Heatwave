@@ -31,10 +31,14 @@ public class Gun : MonoBehaviour
     }
     public void Shoot()
     {
-        //This looks at what gun type the player has chose, and forwards them to the correct function for shooting
-        if (gunSelection == 1)
+        bool ableToShoot = ammoHandler.CheckAmmo();
+        if (ableToShoot)
         {
-            ShotgunShootSelector();
+            //This looks at what gun type the player has chose, and forwards them to the correct function for shooting
+            if (gunSelection == 1)
+            {
+                ShotgunShootSelector();
+            }
         }
     }
     #region Shotgun
