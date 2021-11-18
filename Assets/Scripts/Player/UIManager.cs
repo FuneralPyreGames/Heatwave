@@ -13,4 +13,14 @@ public class UIManager : MonoBehaviour
         healthText.text = "Current Health = ";
         healthText.text += healthToUpdate;
     }
+    public void UpdateInGunAmmoText(int inGunAmmo)
+    {
+        inGunAmmoText.text = "Current In Gun Ammo = ";
+        inGunAmmoText.text += inGunAmmo;
+    }
+    public void UpdateCarryAmmoText(int carryAmmo)
+    {
+        inGunAmmoText.text = "Current Carry Ammo = ";
+        inGunAmmoText.text += carryAmmo;
+    }
 }

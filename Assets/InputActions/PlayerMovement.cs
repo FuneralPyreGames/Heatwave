@@ -286,6 +286,15 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""f035836a-daa9-4db1-998a-13da698d8475"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -319,6 +328,28 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Controller"",
                     ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d442853a-5aeb-4f6f-8148-789db31e2da9"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard And Mouse"",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""317bd0a5-c0e5-4310-9ede-2714b12f7c61"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -365,6 +396,7 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
         // Gunplay
         m_Gunplay = asset.FindActionMap("Gunplay", throwIfNotFound: true);
         m_Gunplay_Shoot = m_Gunplay.FindAction("Shoot", throwIfNotFound: true);
+        m_Gunplay_Reload = m_Gunplay.FindAction("Reload", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -490,11 +522,13 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Gunplay;
     private IGunplayActions m_GunplayActionsCallbackInterface;
     private readonly InputAction m_Gunplay_Shoot;
+    private readonly InputAction m_Gunplay_Reload;
     public struct GunplayActions
     {
         private @PlayerMovement m_Wrapper;
         public GunplayActions(@PlayerMovement wrapper) { m_Wrapper = wrapper; }
         public InputAction @Shoot => m_Wrapper.m_Gunplay_Shoot;
+        public InputAction @Reload => m_Wrapper.m_Gunplay_Reload;
         public InputActionMap Get() { return m_Wrapper.m_Gunplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -507,6 +541,9 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                 @Shoot.started -= m_Wrapper.m_GunplayActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_GunplayActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_GunplayActionsCallbackInterface.OnShoot;
+                @Reload.started -= m_Wrapper.m_GunplayActionsCallbackInterface.OnReload;
+                @Reload.performed -= m_Wrapper.m_GunplayActionsCallbackInterface.OnReload;
+                @Reload.canceled -= m_Wrapper.m_GunplayActionsCallbackInterface.OnReload;
             }
             m_Wrapper.m_GunplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -514,6 +551,9 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
             }
         }
     }
@@ -547,5 +587,6 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
     public interface IGunplayActions
     {
         void OnShoot(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
 }

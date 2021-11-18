@@ -217,6 +217,7 @@ MonoBehaviour:
   movePlayer: {fileID: 3956212761304785412}
   look: {fileID: 3956212761304785414}
   gun: {fileID: 3956212762304459727}
+  ammoHandler: {fileID: 3956212762304459696}
 --- !u!114 &3956212761304785412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,8 +1013,9 @@ MonoBehaviour:
   currentInGunAmmo: 0
   maxCarryAmmo: 100
   currentCarryAmmo: 0
-  startingInGunAmmo: 0
-  startingCarryAmmo: 0
+  startingInGunAmmo: 20
+  startingCarryAmmo: 100
+  uIManager: {fileID: 5953287873040461280}
 --- !u!114 &3956212762304459727
 MonoBehaviour:
   m_ObjectHideFlags: 0

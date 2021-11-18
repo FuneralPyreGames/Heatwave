@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] MovePlayer movePlayer;
     [SerializeField] Look look;
     [SerializeField] Gun gun;
+    [SerializeField] AmmoHandler ammoHandler;
     PlayerMovement.MovementActions movementActions;
     PlayerMovement.GunplayActions gunplayActions;
     Vector2 movementInput;
@@ -25,6 +26,7 @@ public class InputManager : MonoBehaviour
         movementActions.Sprint.started += _ => StartSprint();
         movementActions.Sprint.canceled += _ => EndSprint();
         gunplayActions.Shoot.performed += _ => gun.Shoot();
+        gunplayActions.Reload.performed += _ => ammoHandler.Reload();
     }
     void Update()
     {
