@@ -9683,6 +9683,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9175748211190552624, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 9175748211422688406, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
         type: 3}
       propertyPath: gun
