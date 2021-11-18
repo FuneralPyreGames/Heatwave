@@ -12,13 +12,7 @@ public class MainMenu : MonoBehaviour
     public SceneChangeManager sceneChangeManager;
     public void Awake()
     {
-        while(GameObject.Find("PersistentComponents(Clone)") == null)
-        {
-            print("Unable to find components");
-        }
-        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
-        persistentData = persistentComponents.GetComponent<PersistentData>();
-        sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
+        StartCoroutine(WaitToGetComponents());
     }
     public void OpenWarningMenu()
     {
@@ -40,5 +34,12 @@ public class MainMenu : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+    IEnumerator WaitToGetComponents()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
+        persistentData = persistentComponents.GetComponent<PersistentData>();
+        sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
     }
 }
