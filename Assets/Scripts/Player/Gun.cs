@@ -5,8 +5,8 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     [Header("Gun Select")]
-    [SerializeField] string[] gunTypes = { "Pistol", "Shotgun", "Rifle" };
-    [SerializeField] int gunSelection;
+    public string[] gunTypes = { "Pistol", "Shotgun", "Rifle" };
+    public int gunSelection;
     [Header("Shot Attributes")]
     [SerializeField] float Range = 50f;
     [SerializeField] float Damage = 10f;
