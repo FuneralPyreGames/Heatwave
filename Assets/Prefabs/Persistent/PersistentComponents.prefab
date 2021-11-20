@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fromLevelSelect: 0
-  firstLevel: Level 2
+  firstLevel: Level 1
   lastCompletedLevel: 0
   level1CompleteWithPistol: 0
   level1CompleteWithShotgun: 0

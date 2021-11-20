@@ -19,6 +19,7 @@ public class LevelExit : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
+        print("Trigger Entered");
         if (collision.gameObject.tag == "Player")
         {
             sceneChangeManager.LoadLevel("MainMenu");
