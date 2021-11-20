@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9103811334885083536}
   - component: {fileID: 9103811334885083539}
   - component: {fileID: 7069417292769201957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cold 2
   m_TagString: HeatSetters
   m_Icon: {fileID: 0}

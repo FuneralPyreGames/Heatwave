@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6151743033213970352}
   - component: {fileID: 6151743033213970353}
   - component: {fileID: 7655628620461114872}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hot 2
   m_TagString: HeatSetters
   m_Icon: {fileID: 0}
