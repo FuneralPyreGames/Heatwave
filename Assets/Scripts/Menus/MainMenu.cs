@@ -8,11 +8,16 @@ using UnityEditor;
 public class MainMenu : MonoBehaviour
 {
     public GameObject warningMenu;
+    public GameObject optionsMenu;
     public PersistentData persistentData;
     public SceneChangeManager sceneChangeManager;
     public void Awake()
     {
         StartCoroutine(WaitToGetComponents());
+    }
+    public void OpenOptionsMenu()
+    {
+        optionsMenu.SetActive(true);
     }
     public void OpenWarningMenu()
     {
