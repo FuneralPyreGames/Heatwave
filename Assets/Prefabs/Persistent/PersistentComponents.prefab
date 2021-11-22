@@ -47,6 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e277bd697ed140b458c56d265e0f8023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pilesOfSnow: {fileID: 0}
+  vehicularCombat: {fileID: 0}
+  Stardust: {fileID: 0}
+  downWithTheShip: {fileID: 0}
+  currentlyUntitled: {fileID: 0}
 --- !u!114 &7175928581190689572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,11 +65,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fromLevelSelect: 0
-  firstLevel: Level 2
+  firstLevel: Level 1
   lastCompletedLevel: 0
   level1CompleteWithPistol: 0
   level1CompleteWithShotgun: 0
   level1CompleteWithRifle: 0
+  level2CompleteWithPistol: 0
+  level2CompleteWithShotgun: 0
+  level2CompleteWithRifle: 0
+  level3CompleteWithPistol: 0
+  level3CompleteWithShotgun: 0
+  level3CompleteWithRifle: 0
 --- !u!114 &7175928581190689573
 MonoBehaviour:
   m_ObjectHideFlags: 0

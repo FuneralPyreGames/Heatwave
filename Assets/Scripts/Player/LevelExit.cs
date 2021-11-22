@@ -7,6 +7,10 @@ public class LevelExit : MonoBehaviour
     public PersistentData persistentData;
     public SceneChangeManager sceneChangeManager;
     public int currentLevel;
+    public GameObject levelEndScreen;
+    public GameObject notLevelSelectText;
+    public GameObject levelSelectText;
+    public GameObject nextLevel;
     private void Awake()
     {
         while (GameObject.Find("PersistentComponents(Clone)") == null)
@@ -22,7 +26,28 @@ public class LevelExit : MonoBehaviour
         print("Trigger Entered");
         if (collision.gameObject.tag == "Player")
         {
-            sceneChangeManager.LoadLevel("MainMenu");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            persistentData.SetLastCompletedLevel(currentLevel);
+            Time.timeScale = 0f;
+            levelEndScreen.SetActive(true);
+            if (persistentData.fromLevelSelect == false)
+            {
+                notLevelSelectText.SetActive(true);
+                nextLevel.SetActive(true);
+            }
+            if (persistentData.fromLevelSelect == true)
+            {
+                levelSelectText.SetActive(true);
+            }
         }
+    }
+    public void LoadTheNextLevel()
+    {
+        persistentData.LoadNextLevel();
+    }
+    public void LoadMainMenu()
+    {
+        sceneChangeManager.LoadLevel("Main Menu");
     }
 }

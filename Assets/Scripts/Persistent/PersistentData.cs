@@ -13,6 +13,14 @@ public class PersistentData : MonoBehaviour
     public bool level1CompleteWithPistol;
     public bool level1CompleteWithShotgun;
     public bool level1CompleteWithRifle;
+    [Header("Level 2")]
+    public bool level2CompleteWithPistol;
+    public bool level2CompleteWithShotgun;
+    public bool level2CompleteWithRifle;
+    [Header("Level 3")]
+    public bool level3CompleteWithPistol;
+    public bool level3CompleteWithShotgun;
+    public bool level3CompleteWithRifle;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -22,5 +30,38 @@ public class PersistentData : MonoBehaviour
         level1CompleteWithPistol = false;
         level1CompleteWithRifle = false;
         level1CompleteWithShotgun = false;
+        level2CompleteWithPistol = false;
+        level2CompleteWithRifle = false;
+        level2CompleteWithShotgun = false;
+        level3CompleteWithPistol = false;
+        level3CompleteWithShotgun = false;
+        level3CompleteWithRifle = false;
+    }
+    public void SetLastCompletedLevel(int level)
+    {
+        lastCompletedLevel = level;
+    }
+    public void LoadNextLevel()
+    {
+        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
+        SceneChangeManager sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
+        int nextLevel = lastCompletedLevel += 1;
+        switch (nextLevel)
+        {
+            case 1:
+                sceneChangeManager.LoadLevel("Level 1");
+                break;
+            case 2:
+                sceneChangeManager.LoadLevel("Level 2");
+                break;
+            case 3:
+                sceneChangeManager.LoadLevel("Level 3");
+                break;
+            case 4:
+                sceneChangeManager.LoadLevel("Main Menu");
+                break;
+            default:
+                break;
+        }
     }
 }
