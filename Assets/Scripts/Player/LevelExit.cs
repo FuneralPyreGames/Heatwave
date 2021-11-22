@@ -44,10 +44,12 @@ public class LevelExit : MonoBehaviour
     }
     public void LoadTheNextLevel()
     {
+        Time.timeScale = 1f;
         persistentData.LoadNextLevel();
     }
     public void LoadMainMenu()
     {
-        sceneChangeManager.LoadLevel("Main Menu");
+        Time.timeScale = 1f;
+        sceneChangeManager.LoadLevel("MainMenu");
     }
 }
