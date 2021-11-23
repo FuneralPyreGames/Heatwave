@@ -145,9 +145,9 @@ MonoBehaviour:
     m_Bits: 64
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 2
-  sightRange: 20
-  attackRange: 12
+  timeBetweenAttacks: 1.1
+  sightRange: 40
+  attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
   Gun: {fileID: 4105562739466945130}
