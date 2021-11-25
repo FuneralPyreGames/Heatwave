@@ -100,7 +100,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -125,7 +125,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -150,7 +150,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -175,7 +175,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -200,7 +200,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -225,7 +225,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -250,7 +250,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -315,7 +315,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -340,7 +340,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -365,7 +365,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -390,7 +390,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -419,7 +419,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -444,7 +444,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -469,7 +469,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -529,7 +529,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -554,7 +554,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -579,7 +579,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -604,7 +604,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -629,7 +629,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -654,7 +654,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
@@ -679,7 +679,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.collider.tag == "Enemy")
             {
-                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage, hit.point, hit.normal);
             }
             CreateLaser(hit.point);
         }
