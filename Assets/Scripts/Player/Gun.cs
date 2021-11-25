@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    #region Variables
     [Header("Gun Select")]
     public string[] gunTypes = { "Pistol", "Shotgun", "Rifle" };
     public int gunSelection;
     [Header("Shot Attributes")]
     [SerializeField] float Range = 50f;
     [SerializeField] float Damage = 10f;
-    //[SerializeField] float fireRate = 5f;
     [SerializeField] float reloadTime;
     [SerializeField] float inaccuracyDistance = 0f;
     [SerializeField] float fadeDuration = 0.3f;
-    [Header("Shotgun Settings")]
-    //[SerializeField] bool rapidFire = true;
     [Header("Assignables")]
     [SerializeField] GameObject laser;
     [SerializeField] PlayerDataController playerDataController;
@@ -23,6 +21,8 @@ public class Gun : MonoBehaviour
     [SerializeField] AmmoHandler ammoHandler;
     [Header("Not In Inspector")]
     Transform playerCamera;
+    #endregion
+    #region Starting Functions
     void Awake()
     {
         playerCamera = Camera.main.transform;
@@ -35,13 +35,235 @@ public class Gun : MonoBehaviour
         if (ableToShoot)
         {
             //This looks at what gun type the player has chose, and forwards them to the correct function for shooting
+            if (gunSelection == 0)
+            {
+                PistolShootSelector();
+            }
             if (gunSelection == 1)
             {
                 ShotgunShootSelector();
             }
+            if (gunSelection == 2)
+            {
+                RifleShootSelector();
+            }
         }
     }
+    #endregion
+    #region Pistol
+    // Damage = 20
+    // Ammo = 6
+    // Range = 20
+    public void PistolShootSelector()
+    {
+        int currentHeat = playerDataController.currentHeat;
+        switch(currentHeat)
+        {
+            case -3:
+                PistolShotColdLevel3();
+                break;
+            case -2:
+                PistolShotColdLevel2();
+                break;
+            case -1:
+                PistolShotColdLevel1();
+                break;
+            case 0:
+                PistolShotNeutral();
+                break;
+            case 1:
+                PistolShotHotLevel1();
+                break;
+            case 2:
+                PistolShotHotLevel2();
+                break;
+            case 3:
+                PistolShotHotLevel3();
+                break;
+            default:
+                break;
+        }
+    }
+    public void PistolShotColdLevel3()
+    {
+        Range = 35f;
+        Damage = 14f;
+        inaccuracyDistance = 1.5f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
+    }
+    public void PistolShotColdLevel2()
+    {
+        Range = 30f;
+        Damage = 16f;
+        inaccuracyDistance = 1f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
+    }
+    public void PistolShotColdLevel1()
+    {
+        Range = 25f;
+        Damage = 18f;
+        inaccuracyDistance = .5f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
+    }
+    public void PistolShotNeutral()
+    {
+        Range = 20f;
+        Damage = 20f;
+        inaccuracyDistance = 0f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
+    }
+    public void PistolShotHotLevel1()
+    {
+        Range = 15f;
+        Damage = 25f;
+        inaccuracyDistance = 0f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
+    }
+    public void PistolShotHotLevel2()
+    {
+        Range = 10f;
+        Damage = 30f;
+        inaccuracyDistance = 0f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
+    }
+    public void PistolShotHotLevel3()
+    {
+        Range = 5f;
+        Damage = 35f;
+        inaccuracyDistance = 0f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
+    }
+    #endregion
     #region Shotgun
+    // Damage = 10
+    // Ammo = 20
+    // Range = 25
     public void ShotgunShootSelector()
     {
         //This uses the player data controller to figure out the current heat state, and then picks the correct gun firing function
@@ -255,6 +477,69 @@ public class Gun : MonoBehaviour
         {
             CreateLaser(playerCamera.position + shootingDir * Range);
         }
+    }
+    #endregion
+    #region Rifle
+    // Damage = 15
+    // Ammo = 10
+    // Range = 35
+    public void RifleShootSelector()
+    {
+        int currentHeat = playerDataController.currentHeat;
+        switch(currentHeat)
+        {
+            case -3:
+                RifleShotCold3();
+                break;
+            case -2:
+                RifleShotCold2();
+                break;
+            case -1:
+                RifleShotCold1();
+                break;
+            case 0:
+                RifleShotNeutral();
+                break;
+            case 1:
+                RifleShotHot1();
+                break;
+            case 2:
+                RifleShotHot2();
+                break;
+            case 3:
+                RifleShotHot3();
+                break;
+            default:
+                break;
+        }
+    }
+    public void RifleShotCold3()
+    {
+
+    }
+    public void RifleShotCold2()
+    {
+
+    }
+    public void RifleShotCold1()
+    {
+
+    }
+    public void RifleShotNeutral()
+    {
+
+    }
+    public void RifleShotHot1()
+    {
+
+    }
+    public void RifleShotHot2()
+    {
+
+    }
+    public void RifleShotHot3()
+    {
+
     }
     #endregion
     #region GeneralFunctions
