@@ -11,6 +11,12 @@ public class AmmoHandler : MonoBehaviour
     public int startingInGunAmmo;
     public int startingCarryAmmo;
     [SerializeField] UIManager uIManager;
+    public void SetAmmo(int maxAmmo)
+    {
+        maxInGunAmmo = maxAmmo;
+        currentInGunAmmo = maxInGunAmmo;
+        uIManager.UpdateInGunAmmoText(currentInGunAmmo);
+    }
     public bool CheckAmmo()
     {
         if (currentInGunAmmo > 0)

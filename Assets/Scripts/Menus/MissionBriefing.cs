@@ -8,6 +8,7 @@ public class MissionBriefing : MonoBehaviour
     public GameObject Enemies;
     public GameObject missionBriefing;
     public Gun gun;
+    public AmmoHandler ammoHandler;
     public void LoadViaShotgun()
     {        
         Player.SetActive(true);
@@ -16,6 +17,7 @@ public class MissionBriefing : MonoBehaviour
         Audio Audio = persistentComponents.GetComponent<Audio>();
         Audio.PlayRandomSong();
         gun.gunSelection = 1;
+        ammoHandler.SetAmmo(20);
         missionBriefing.SetActive(false);
     }
     public void LoadViaPistol()
@@ -26,6 +28,7 @@ public class MissionBriefing : MonoBehaviour
         Audio Audio = persistentComponents.GetComponent<Audio>();
         Audio.PlayRandomSong();
         gun.gunSelection = 0;
+        ammoHandler.SetAmmo(6);
         missionBriefing.SetActive(false);
     }
     public void LoadViaRifle()
@@ -36,6 +39,7 @@ public class MissionBriefing : MonoBehaviour
         Audio Audio = persistentComponents.GetComponent<Audio>();
         Audio.PlayRandomSong();
         gun.gunSelection = 2;
+        ammoHandler.SetAmmo(10);
         missionBriefing.SetActive(false);
     }
     public void Exit()
