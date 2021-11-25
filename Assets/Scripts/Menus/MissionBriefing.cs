@@ -18,6 +18,26 @@ public class MissionBriefing : MonoBehaviour
         gun.gunSelection = 1;
         missionBriefing.SetActive(false);
     }
+    public void LoadViaPistol()
+    {        
+        Player.SetActive(true);
+        Enemies.SetActive(true);          
+        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
+        Audio Audio = persistentComponents.GetComponent<Audio>();
+        Audio.PlayRandomSong();
+        gun.gunSelection = 0;
+        missionBriefing.SetActive(false);
+    }
+    public void LoadViaRifle()
+    {        
+        Player.SetActive(true);
+        Enemies.SetActive(true);          
+        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
+        Audio Audio = persistentComponents.GetComponent<Audio>();
+        Audio.PlayRandomSong();
+        gun.gunSelection = 2;
+        missionBriefing.SetActive(false);
+    }
     public void Exit()
     {
         GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");

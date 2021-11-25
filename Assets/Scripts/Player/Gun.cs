@@ -515,31 +515,178 @@ public class Gun : MonoBehaviour
     }
     public void RifleShotCold3()
     {
-
+        Range = 50f;
+        Damage = 9f;
+        inaccuracyDistance = 1.5f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void RifleShotCold2()
     {
-
+        Range = 45f;
+        Damage = 11f;
+        inaccuracyDistance = 1f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void RifleShotCold1()
     {
-
+        Range = 40f;
+        Damage = 13f;
+        inaccuracyDistance = .5f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void RifleShotNeutral()
     {
-
+        Range = 35f;
+        Damage = 15f;
+        inaccuracyDistance = 0f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void RifleShotHot1()
     {
-
+        Range = 30f;
+        Damage = 18f;
+        inaccuracyDistance = 0f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void RifleShotHot2()
     {
-
+        Range = 25f;
+        Damage = 21f;
+        inaccuracyDistance = 0f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     public void RifleShotHot3()
     {
-
+        Range = 20f;
+        Damage = 25f;
+        inaccuracyDistance = 0f;
+        ammoHandler.DecrementGunAmmo();
+        Vector3 shootingDir = GetShootingDirection();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, shootingDir, out hit, Range))
+        {
+            if (hit.collider.GetComponent<DamageableObject>() != null)
+            {
+                hit.collider.GetComponent<DamageableObject>().TakeDamage(Damage, hit.point, hit.normal);
+            }
+            else if (hit.collider.tag == "Enemy")
+            {
+                hit.collider.GetComponent<EnemyHealth>().LoseHealth(Damage);
+            }
+            CreateLaser(hit.point);
+        }
+        else
+        {
+            CreateLaser(playerCamera.position + shootingDir * Range);
+        }
     }
     #endregion
     #region GeneralFunctions
