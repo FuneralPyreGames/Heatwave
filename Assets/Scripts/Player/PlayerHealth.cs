@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]float maxHealth = 100;
     [SerializeField]float currentHealth;
     [SerializeField]UIManager uIManager;
+    [SerializeField]GameObject deathUI;
     void Awake()
     {
         currentHealth = maxHealth;
@@ -22,6 +23,9 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Death()
     {
-        print("You Died");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        deathUI.SetActive(true);
     }
 }
