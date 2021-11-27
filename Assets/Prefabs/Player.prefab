@@ -364,7 +364,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   uIManager: {fileID: 5953287873040461280}
-  deathUI: {fileID: 0}
+  deathUI: {fileID: 3875745362989098577}
 --- !u!1 &3956212761122493488
 GameObject:
   m_ObjectHideFlags: 0

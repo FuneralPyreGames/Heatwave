@@ -8091,6 +8091,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1374972389}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1374972391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3956212762304459696, guid: 1d827959403bb714fb4d0d5a37e912c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1374972389}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5efd827b91b5c42aeb590f9ff3c451bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1429747479
 GameObject:
   m_ObjectHideFlags: 0
@@ -12356,6 +12368,11 @@ PrefabInstance:
       propertyPath: Enemies
       value: 
       objectReference: {fileID: 16505239}
+    - target: {fileID: 9175748211422688406, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
+        type: 3}
+      propertyPath: ammoHandler
+      value: 
+      objectReference: {fileID: 1374972391}
     - target: {fileID: 9175748211422688407, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
         type: 3}
       propertyPath: m_RootOrder
