@@ -58,6 +58,9 @@ public class PersistentData : MonoBehaviour
                 sceneChangeManager.LoadLevel("Level 3");
                 break;
             case 4:
+                sceneChangeManager.LoadLevel("Level 4");
+                break;
+            case 5:
                 sceneChangeManager.LoadLevel("MainMenu");
                 break;
             default:
