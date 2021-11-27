@@ -365,3 +365,72 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 269.614030 seconds.
+  path: Assets/Prefabs/HeatColliders/Cold 1.prefab
+  artifactKey: Guid(f7f5d9658a05b524da6fd08390607681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HeatColliders/Cold 1.prefab using Guid(f7f5d9658a05b524da6fd08390607681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4486292f9c48a1274b60ab55dc93dbe9') in 0.216935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Prefabs/HeatColliders/Hot 1.prefab
+  artifactKey: Guid(8398b347dda21a945aff9021fe9626fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HeatColliders/Hot 1.prefab using Guid(8398b347dda21a945aff9021fe9626fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65f9aa1bba5169691cf0cf2ec6484703') in 0.017800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Prefabs/HeatColliders/Cold 3.prefab
+  artifactKey: Guid(775b20df0d601114fafe585b3972717c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HeatColliders/Cold 3.prefab using Guid(775b20df0d601114fafe585b3972717c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b771f88a899ed9ba300d98126470085') in 0.015493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Prefabs/HeatColliders/Hot 3.prefab
+  artifactKey: Guid(520c1d4353d4a3e4997bc259976ebf5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HeatColliders/Hot 3.prefab using Guid(520c1d4353d4a3e4997bc259976ebf5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d7aebb67cb144cc7093b4549cf1040b') in 0.010951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Prefabs/HeatColliders/Neutral.prefab
+  artifactKey: Guid(62d320b2e5e0339408b45f4581210e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HeatColliders/Neutral.prefab using Guid(62d320b2e5e0339408b45f4581210e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45ee26f8bd799718611545cea69b064f') in 0.008434 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Prefabs/HeatColliders/Hot 2.prefab
+  artifactKey: Guid(1d4dd50030f6fee48ae4e442a84e7305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HeatColliders/Hot 2.prefab using Guid(1d4dd50030f6fee48ae4e442a84e7305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06b4096051cda546f1e3cd45a93386d6') in 0.009099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 217.974149 seconds.
+  path: Assets/Materials/LevelExit.mat
+  artifactKey: Guid(21738417ac6ae8f43b9757f45af708c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/LevelExit.mat using Guid(21738417ac6ae8f43b9757f45af708c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3d08dbcbbe9ba1c645cfb6fe224d649') in 0.130561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.176743 seconds.
+  path: Assets/Prefabs/Persistent/PersistentComponents.prefab
+  artifactKey: Guid(371788f111877f2409e446fff2787d23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Persistent/PersistentComponents.prefab using Guid(371788f111877f2409e446fff2787d23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84c425f215ea971708b12c83bec29b9c') in 0.008570 seconds 
+========================================================================
+Received Prepare
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 4.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (391.6 KB). Loaded Objects now: 6286.
+Memory consumption went from 323.4 MB to 323.0 MB.
+Total: 14.209625 ms (FindLiveObjects: 0.378250 ms CreateObjectMapping: 0.085042 ms MarkObjects: 13.586833 ms  DeleteObjects: 0.158792 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
