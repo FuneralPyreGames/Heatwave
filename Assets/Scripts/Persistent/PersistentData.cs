@@ -21,6 +21,10 @@ public class PersistentData : MonoBehaviour
     public bool level3CompleteWithPistol;
     public bool level3CompleteWithShotgun;
     public bool level3CompleteWithRifle;
+    [Header("Level 4")]
+    public bool level4CompleteWithPistol;
+    public bool level4CompleteWithShotgun;
+    public bool level4CompleteWithRifle;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -36,6 +40,9 @@ public class PersistentData : MonoBehaviour
         level3CompleteWithPistol = false;
         level3CompleteWithShotgun = false;
         level3CompleteWithRifle = false;
+        level4CompleteWithPistol = false;
+        level4CompleteWithShotgun = false;
+        level4CompleteWithRifle = false;
     }
     public void SetLastCompletedLevel(int level)
     {

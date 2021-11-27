@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class DeathUI : MonoBehaviour
 {
+    public Audio Audio;
     public SceneChangeManager sceneChangeManager;
     private void Awake()
     {
         GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
         sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
+        Audio = persistentComponents.GetComponent<Audio>();
+        Audio.PlayGameOverMusic();
     }
     public void LoadMainMenu()
     {

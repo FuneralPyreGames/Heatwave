@@ -9,6 +9,7 @@ public class Audio : MonoBehaviour
     [SerializeField] AudioClip Stardust;
     [SerializeField] AudioClip downWithTheShip;
     [SerializeField] AudioClip theTeenageGeneration;
+    [SerializeField] AudioClip cursedGameOver;
     public AudioSource audioSource;
     private void Awake()
     {
@@ -40,5 +41,10 @@ public class Audio : MonoBehaviour
                 audioSource.Play();
                 break;
         }
+    }
+    public void PlayGameOverMusic()
+    {
+        audioSource.clip = cursedGameOver;
+        audioSource.Play();
     }
 }

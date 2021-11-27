@@ -53,6 +53,7 @@ MonoBehaviour:
   downWithTheShip: {fileID: 8300000, guid: 448c92aec77cbbc44bdd18f03adc8d74, type: 3}
   theTeenageGeneration: {fileID: 8300000, guid: 5a2de4f432e39a84898b54ad2432c0bc,
     type: 3}
+  cursedGameOver: {fileID: 8300000, guid: 8ea25e109000940b29b78c7b3658b21c, type: 3}
   audioSource: {fileID: 7175928581190689574}
 --- !u!114 &7175928581190689572
 MonoBehaviour:
