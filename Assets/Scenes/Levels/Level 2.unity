@@ -5285,7 +5285,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-13036
+  m_Name: pb_Mesh-185322
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6027,6 +6027,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5938891605473157376, guid: bf6cc5ed83b7e4d30a9bada3e6de51d9,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1102268317}
     - target: {fileID: 5938891605473157376, guid: bf6cc5ed83b7e4d30a9bada3e6de51d9,
         type: 3}
       propertyPath: currentLevel

@@ -7,6 +7,7 @@ public class LevelExit : MonoBehaviour
     public PersistentData persistentData;
     public SceneChangeManager sceneChangeManager;
     public SaveManager saveManager;
+    public Gun gun;
     public int currentLevel;
     public GameObject levelEndScreen;
     public GameObject notLevelSelectText;
@@ -32,6 +33,7 @@ public class LevelExit : MonoBehaviour
             Cursor.visible = true;
             persistentData.SetLastCompletedLevel(currentLevel);
             Time.timeScale = 0f;
+            persistentData.SetCompletionState(gun, currentLevel);
             levelEndScreen.SetActive(true);
             if (persistentData.fromLevelSelect == false)
             {

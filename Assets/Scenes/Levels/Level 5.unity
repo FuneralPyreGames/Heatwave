@@ -4260,6 +4260,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5938891605473157376, guid: bf6cc5ed83b7e4d30a9bada3e6de51d9,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1454726469}
+    - target: {fileID: 5938891605473157376, guid: bf6cc5ed83b7e4d30a9bada3e6de51d9,
+        type: 3}
+      propertyPath: currentLevel
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5938891605473157381, guid: bf6cc5ed83b7e4d30a9bada3e6de51d9,
         type: 3}
       propertyPath: m_Size.y
@@ -11816,7 +11826,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-72624
+  m_Name: pb_Mesh-175172
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

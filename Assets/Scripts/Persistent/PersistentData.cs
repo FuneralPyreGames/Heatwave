@@ -87,4 +87,82 @@ public class PersistentData : MonoBehaviour
                 break;
         }
     }
+    public void SetCompletionState(Gun gun, int currentLevel)
+    {
+        switch (currentLevel)
+        {
+            case 1:
+                if (gun.gunSelection == 0)
+                {
+                    level1CompleteWithPistol = true;
+                }
+                else if (gun.gunSelection == 1)
+                {
+                    level1CompleteWithShotgun = true;
+                }
+                else if (gun.gunSelection == 2)
+                {
+                    level1CompleteWithRifle = true;
+                }
+                break;
+            case 2:
+                if (gun.gunSelection == 0)
+                {
+                    level2CompleteWithPistol = true;
+                }
+                else if (gun.gunSelection == 1)
+                {
+                    level2CompleteWithShotgun = true;
+                }
+                else if (gun.gunSelection == 2)
+                {
+                    level2CompleteWithRifle = true;
+                }
+                break;
+            case 3:
+                if (gun.gunSelection == 0)
+                {
+                    level3CompleteWithPistol = true;
+                }
+                else if (gun.gunSelection == 1)
+                {
+                    level3CompleteWithShotgun = true;
+                }
+                else if (gun.gunSelection == 2)
+                {
+                    level3CompleteWithRifle = true;
+                }
+                break;
+            case 4:
+                if (gun.gunSelection == 0)
+                {
+                    level4CompleteWithPistol = true;
+                }
+                else if (gun.gunSelection == 1)
+                {
+                    level4CompleteWithShotgun = true;
+                }
+                else if (gun.gunSelection == 2)
+                {
+                    level4CompleteWithRifle = true;
+                }
+                break;
+            case 5:
+                if (gun.gunSelection == 0)
+                {
+                    level5CompleteWithPistol = true;
+                }
+                else if (gun.gunSelection == 1)
+                {
+                    level5CompleteWithShotgun = true;
+                }
+                else if (gun.gunSelection == 2)
+                {
+                    level5CompleteWithRifle = true;
+                }
+                break;
+            default:
+                break;
+        }
+    }
 }
