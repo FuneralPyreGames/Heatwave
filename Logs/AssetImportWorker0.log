@@ -901,3 +901,27 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 182.640377 seconds.
+  path: Assets/Prefabs/MissionBriefing.prefab
+  artifactKey: Guid(c8c3a528d94b24f0d8bcb9e32934c85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MissionBriefing.prefab using Guid(c8c3a528d94b24f0d8bcb9e32934c85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d7a65b1232b74485d71c78843719051') in 0.041686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.869624 seconds.
+  path: Assets/Prefabs/MissionBriefing.prefab
+  artifactKey: Guid(c8c3a528d94b24f0d8bcb9e32934c85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MissionBriefing.prefab using Guid(c8c3a528d94b24f0d8bcb9e32934c85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d1d43f1d90a846836d9c7051aaaf723') in 0.016744 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.016907 seconds.
+  path: Assets/Prefabs/MissionBriefing.prefab
+  artifactKey: Guid(c8c3a528d94b24f0d8bcb9e32934c85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MissionBriefing.prefab using Guid(c8c3a528d94b24f0d8bcb9e32934c85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceecfab39eb6210a96c4ab03539a2acd') in 0.017996 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.036915 seconds.
+  path: Assets/Prefabs/MissionBriefing.prefab
+  artifactKey: Guid(c8c3a528d94b24f0d8bcb9e32934c85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MissionBriefing.prefab using Guid(c8c3a528d94b24f0d8bcb9e32934c85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efaf729099d1c08eb394851e73a352ca') in 0.017038 seconds 
