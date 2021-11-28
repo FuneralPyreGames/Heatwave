@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsMenu;
     public PersistentData persistentData;
     public SceneChangeManager sceneChangeManager;
+    public SaveManager saveManager;
     public void Awake()
     {
         StartCoroutine(WaitToGetComponents());
@@ -32,6 +33,11 @@ public class MainMenu : MonoBehaviour
         persistentData.ResetGame();
         sceneChangeManager.LoadLevel(persistentData.firstLevel);
     }
+    public void LoadGame()
+    {
+        saveManager.LoadSaves();
+        persistentData.LoadNextLevel();
+    }
     public void Quit()
     {
         #if UNITY_EDITOR
@@ -46,5 +52,6 @@ public class MainMenu : MonoBehaviour
         GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
         persistentData = persistentComponents.GetComponent<PersistentData>();
         sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
+        saveManager = persistentComponents.GetComponent<SaveManager>();
     }
 }

@@ -164,4 +164,84 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt("5S", 0);
         PlayerPrefs.SetInt("Last Level", 0);
     }
+    public void LoadSaves()
+    {
+        int Value1P = PlayerPrefs.GetInt("1P", 0);
+        int Value2P = PlayerPrefs.GetInt("2P", 0);
+        int Value3P = PlayerPrefs.GetInt("3P", 0);
+        int Value4P = PlayerPrefs.GetInt("4P", 0);
+        int Value5P = PlayerPrefs.GetInt("5P", 0);
+        int Value1R = PlayerPrefs.GetInt("1R", 0);
+        int Value2R = PlayerPrefs.GetInt("2R", 0);
+        int Value3R = PlayerPrefs.GetInt("3R", 0);
+        int Value4R = PlayerPrefs.GetInt("4R", 0);
+        int Value5R = PlayerPrefs.GetInt("5R", 0);
+        int Value1S = PlayerPrefs.GetInt("1S", 0);
+        int Value2S = PlayerPrefs.GetInt("2S", 0);
+        int Value3S = PlayerPrefs.GetInt("3S", 0);
+        int Value4S = PlayerPrefs.GetInt("4S", 0);
+        int Value5S = PlayerPrefs.GetInt("5S", 0);
+        int ValueLastLevel = PlayerPrefs.GetInt("Last Level", 0);
+        if (Value1P == 1)
+        {
+            persistentData.level1CompleteWithPistol = true;
+        }
+        if (Value2P == 1)
+        {
+            persistentData.level2CompleteWithPistol = true;
+        }
+        if (Value3P == 1)
+        {
+            persistentData.level3CompleteWithPistol = true;
+        }
+        if (Value4P == 1)
+        {
+            persistentData.level4CompleteWithPistol = true;
+        }
+        if (Value5P == 1)
+        {
+            persistentData.level5CompleteWithPistol = true;
+        }
+        if (Value1S == 1)
+        {
+            persistentData.level1CompleteWithShotgun = true;
+        }
+        if (Value2S == 1)
+        {
+            persistentData.level2CompleteWithShotgun = true;
+        }
+        if (Value3S == 1)
+        {
+            persistentData.level3CompleteWithShotgun = true;
+        }
+        if (Value4S == 1)
+        {
+            persistentData.level4CompleteWithShotgun = true;
+        }
+        if (Value5S == 1)
+        {
+            persistentData.level5CompleteWithShotgun = true;
+        }
+        if (Value1R == 1)
+        {
+            persistentData.level1CompleteWithRifle = true;
+        }
+        if (Value2R == 1)
+        {
+            persistentData.level2CompleteWithRifle = true;
+        }
+        if (Value3R == 1)
+        {
+            persistentData.level3CompleteWithRifle = true;
+        }
+        if (Value4R == 1)
+        {
+            persistentData.level4CompleteWithRifle = true;
+        }
+        if (Value4R == 1)
+        {
+            persistentData.level5CompleteWithRifle = true;
+        }
+        persistentData.lastCompletedLevel = ValueLastLevel;
+    }
 }
