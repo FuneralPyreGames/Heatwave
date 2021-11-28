@@ -25,6 +25,10 @@ public class PersistentData : MonoBehaviour
     public bool level4CompleteWithPistol;
     public bool level4CompleteWithShotgun;
     public bool level4CompleteWithRifle;
+    [Header("Level 5")]
+    public bool level5CompleteWithPistol;
+    public bool level5CompleteWithShotgun;
+    public bool level5CompleteWithRifle;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -43,6 +47,9 @@ public class PersistentData : MonoBehaviour
         level4CompleteWithPistol = false;
         level4CompleteWithShotgun = false;
         level4CompleteWithRifle = false;
+        level5CompleteWithPistol = false;
+        level5CompleteWithShotgun = false;
+        level5CompleteWithRifle = false;
     }
     public void SetLastCompletedLevel(int level)
     {
@@ -68,6 +75,9 @@ public class PersistentData : MonoBehaviour
                 sceneChangeManager.LoadLevel("Level 4");
                 break;
             case 5:
+                sceneChangeManager.LoadLevel("Level 5");
+                break;
+            case 6:
                 sceneChangeManager.LoadLevel("MainMenu");
                 break;
             default:

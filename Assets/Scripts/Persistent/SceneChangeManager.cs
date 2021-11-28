@@ -30,6 +30,9 @@ public class SceneChangeManager : MonoBehaviour
             case "Level 4":
                 SceneManager.LoadScene("Level 4");
                 break;
+            case "Level 5":
+                SceneManager.LoadScene("Level 5");
+                break;
             default:
                 break;
         }
