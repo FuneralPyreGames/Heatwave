@@ -35,6 +35,8 @@ public class PersistentData : MonoBehaviour
     }
     public void ResetGame()
     {
+        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
+        SaveManager saveManager = persistentComponents.GetComponent<SaveManager>();
         level1CompleteWithPistol = false;
         level1CompleteWithRifle = false;
         level1CompleteWithShotgun = false;
@@ -50,6 +52,7 @@ public class PersistentData : MonoBehaviour
         level5CompleteWithPistol = false;
         level5CompleteWithShotgun = false;
         level5CompleteWithRifle = false;
+        saveManager.ResetSaves();
     }
     public void SetLastCompletedLevel(int level)
     {

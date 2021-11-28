@@ -6,6 +6,7 @@ public class LevelExit : MonoBehaviour
 {
     public PersistentData persistentData;
     public SceneChangeManager sceneChangeManager;
+    public SaveManager saveManager;
     public int currentLevel;
     public GameObject levelEndScreen;
     public GameObject notLevelSelectText;
@@ -20,6 +21,7 @@ public class LevelExit : MonoBehaviour
         GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
         persistentData = persistentComponents.GetComponent<PersistentData>();
         sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
+        saveManager = persistentComponents.GetComponent<SaveManager>();
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -44,11 +46,13 @@ public class LevelExit : MonoBehaviour
     }
     public void LoadTheNextLevel()
     {
+        saveManager.SaveGame();
         Time.timeScale = 1f;
         persistentData.LoadNextLevel();
     }
     public void LoadMainMenu()
     {
+        saveManager.SaveGame();
         Time.timeScale = 1f;
         sceneChangeManager.LoadLevel("MainMenu");
     }
