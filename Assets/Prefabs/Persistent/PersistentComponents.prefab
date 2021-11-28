@@ -79,6 +79,12 @@ MonoBehaviour:
   level3CompleteWithPistol: 0
   level3CompleteWithShotgun: 0
   level3CompleteWithRifle: 0
+  level4CompleteWithPistol: 0
+  level4CompleteWithShotgun: 0
+  level4CompleteWithRifle: 0
+  level5CompleteWithPistol: 0
+  level5CompleteWithShotgun: 0
+  level5CompleteWithRifle: 0
 --- !u!114 &7175928581190689573
 MonoBehaviour:
   m_ObjectHideFlags: 0
