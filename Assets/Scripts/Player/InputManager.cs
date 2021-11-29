@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] Look look;
     [SerializeField] Gun gun;
     [SerializeField] AmmoHandler ammoHandler;
-    [SerializeField] PauseMenu pauseMenu;
+    [SerializeField] GameObject pauseMenu;
     PlayerMovement.MovementActions movementActions;
     PlayerMovement.GunplayActions gunplayActions;
     Vector2 movementInput;
@@ -54,6 +54,6 @@ public class InputManager : MonoBehaviour
     }
     private void Pause()
     {
-        
+        pauseMenu.SetActive(true);
     }
 }
