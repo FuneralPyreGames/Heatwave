@@ -10,17 +10,17 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI healthText;
     public void UpdateHealthText(float healthToUpdate)
     {
-        healthText.text = "Current Health = ";
+        healthText.text = "";
         healthText.text += healthToUpdate;
     }
     public void UpdateInGunAmmoText(int inGunAmmo)
     {
-        inGunAmmoText.text = "Current In Gun Ammo = ";
+        inGunAmmoText.text = "";
         inGunAmmoText.text += inGunAmmo;
     }
     public void UpdateCarryAmmoText(int carryAmmo)
     {
-        carryAmmoText.text = "Current Carry Ammo = ";
+        carryAmmoText.text = "";
         carryAmmoText.text += carryAmmo;
     }
 }
