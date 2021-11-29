@@ -13144,6 +13144,12 @@ PrefabInstance:
       propertyPath: m_text
       value: Level 4- The Downfall
       objectReference: {fileID: 0}
+    - target: {fileID: 9175748213241724654, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ffb85b9e85d364c93986d9ff6862d1ab,
+        type: 3}
     - target: {fileID: 9175748213241724655, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
         type: 3}
       propertyPath: m_AnchorMax.y

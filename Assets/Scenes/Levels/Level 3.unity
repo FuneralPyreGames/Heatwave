@@ -4837,6 +4837,12 @@ PrefabInstance:
       propertyPath: m_text
       value: Level 3- The Weird Hangar
       objectReference: {fileID: 0}
+    - target: {fileID: 9175748213241724654, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79018f17cddc648f2a677ba0eadb523d,
+        type: 3}
     - target: {fileID: 9175748213241724655, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
         type: 3}
       propertyPath: m_AnchorMax.y

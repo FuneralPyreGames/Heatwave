@@ -2513,6 +2513,12 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 9175748213241724654, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fccdbf79c25dd4c648b9a1cb9a56949a,
+        type: 3}
     - target: {fileID: 9175748213241724655, guid: c8c3a528d94b24f0d8bcb9e32934c85d,
         type: 3}
       propertyPath: m_AnchorMax.y
