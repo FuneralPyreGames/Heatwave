@@ -2368,6 +2368,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3956212762304459724}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &548196443886546963
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4190075372853464733}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c7c52a5c84c2b4a54b1cf5bf10831ae8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &3956212762304459696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2386,6 +2406,7 @@ MonoBehaviour:
   currentCarryAmmo: 0
   startingInGunAmmo: 20
   startingCarryAmmo: 100
+  gunAnim: {fileID: 548196443886546963}
   uIManager: {fileID: 5953287873040461280}
 --- !u!114 &3956212762304459727
 MonoBehaviour:

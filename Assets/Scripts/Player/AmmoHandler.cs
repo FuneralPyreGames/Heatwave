@@ -10,6 +10,7 @@ public class AmmoHandler : MonoBehaviour
     public int currentCarryAmmo;
     public int startingInGunAmmo;
     public int startingCarryAmmo;
+    public Animator gunAnim;
     [SerializeField] UIManager uIManager;
     public void SetAmmo(int maxAmmo)
     {
@@ -49,7 +50,8 @@ public class AmmoHandler : MonoBehaviour
     }
     IEnumerator WaitToReloadOne()
     {
-        yield return new WaitForSeconds(1.5f);
+        gunAnim.SetTrigger("GunReload");
+        yield return new WaitForSeconds(1f);
         currentCarryAmmo -= maxInGunAmmo;
         currentInGunAmmo += maxInGunAmmo;
         print("Reloaded");
@@ -59,7 +61,8 @@ public class AmmoHandler : MonoBehaviour
     }
     IEnumerator WaitToReloadTwo(int ammoToReload)
     {
-        yield return new WaitForSeconds(1.5f);
+        gunAnim.SetTrigger("GunReload");
+        yield return new WaitForSeconds(1f);
         currentInGunAmmo += ammoToReload;
         print("Reloaded");
         print(currentCarryAmmo);

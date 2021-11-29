@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh75936
+  m_Name: pb_Mesh102350
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -293,7 +293,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31280
+  m_Name: pb_Mesh102426
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -514,7 +514,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1486f6307723c487f9e14b57a9905a61, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3288,7 +3288,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1486f6307723c487f9e14b57a9905a61, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4489,6 +4489,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1895374015}
     m_Modifications:
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: sightRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: attackRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: m_Name
@@ -4552,7 +4567,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: inaccuracyDistance
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1add3da2e61a7439382756aa4762bdc1, type: 3}
@@ -6911,6 +6926,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1895374015}
     m_Modifications:
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: sightRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: attackRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: walkPointRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: attackWalkPointRange
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: m_Name
@@ -6974,7 +7014,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: inaccuracyDistance
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1add3da2e61a7439382756aa4762bdc1, type: 3}
@@ -6991,6 +7031,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1895374015}
     m_Modifications:
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: sightRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: attackRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: m_Name
@@ -7054,7 +7109,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: inaccuracyDistance
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1add3da2e61a7439382756aa4762bdc1, type: 3}
@@ -7280,7 +7335,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-181452
+  m_Name: pb_Mesh-200562
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7481,6 +7536,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1895374015}
     m_Modifications:
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: walkPointRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: attackWalkPointRange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: m_Name
@@ -7544,7 +7614,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: inaccuracyDistance
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1add3da2e61a7439382756aa4762bdc1, type: 3}
@@ -7617,7 +7687,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1486f6307723c487f9e14b57a9905a61, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13654,7 +13724,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31190
+  m_Name: pb_Mesh102332
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14015,6 +14085,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1895374015}
     m_Modifications:
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: sightRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: attackRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: m_Name
@@ -14078,7 +14163,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: inaccuracyDistance
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1add3da2e61a7439382756aa4762bdc1, type: 3}

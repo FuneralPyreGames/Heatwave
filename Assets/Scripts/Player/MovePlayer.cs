@@ -31,6 +31,7 @@ public class MovePlayer : MonoBehaviour
         {
             if (isGrounded)
             {
+                Audio = GameObject.Find("PersistentComponents(Clone)").GetComponent<Audio>();
                 Audio.PlayJumpSFX();
                 verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
             }
