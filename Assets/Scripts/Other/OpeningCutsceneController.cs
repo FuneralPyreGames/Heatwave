@@ -14,6 +14,10 @@ public class OpeningCutsceneController : MonoBehaviour
         Audio.PlayOpeningCutsceneAudio();
         StartCoroutine(WaitForCutsceneToEnd());
     }
+    public void SkipCutscene()
+    {
+        sceneChangeManager.LoadLevel("Level 1");
+    }
     IEnumerator WaitForCutsceneToEnd()
     {
         yield return new WaitForSeconds(70f);
