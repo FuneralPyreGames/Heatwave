@@ -9,6 +9,12 @@ public class MissionBriefing : MonoBehaviour
     public GameObject missionBriefing;
     public Gun gun;
     public AmmoHandler ammoHandler;
+    public void Awake()
+    {
+        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
+        Audio Audio = persistentComponents.GetComponent<Audio>();
+        Audio.PlayMissionBriefingMusic();
+    }
     public void LoadViaShotgun()
     {        
         Player.SetActive(true);

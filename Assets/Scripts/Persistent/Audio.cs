@@ -81,4 +81,9 @@ public class Audio : MonoBehaviour
     {
         audioSource.PlayOneShot(jumpSFX);
     }
+    public void PlayMissionBriefingMusic()
+    {
+        audioSource.clip = missionBriefingSong;
+        audioSource.Play();
+    }
 }

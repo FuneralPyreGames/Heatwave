@@ -57,7 +57,7 @@ MonoBehaviour:
   cursedGameOver: {fileID: 8300000, guid: 8ea25e109000940b29b78c7b3658b21c, type: 3}
   openingCutsceneAudio: {fileID: 8300000, guid: 543f833550e694a2a8f58d96fca49a63,
     type: 3}
-  missionBriefingSong: {fileID: 0}
+  missionBriefingSong: {fileID: 8300000, guid: 9a2143659f78845ea83f32b5124c7ec2, type: 3}
   mainMenuSong: {fileID: 8300000, guid: 9cd0570c6f6ca40269532f882489d036, type: 3}
   somethingBrokenSFX: {fileID: 8300000, guid: 26aeac46d560d49a885ff92fb612298d, type: 3}
   enemyHitSFX: {fileID: 8300000, guid: c2c9d5192344046f9a1d86ba405566b0, type: 3}
