@@ -10,6 +10,7 @@ public class Audio : MonoBehaviour
     [SerializeField] AudioClip downWithTheShip;
     [SerializeField] AudioClip theTeenageGeneration;
     [SerializeField] AudioClip cursedGameOver;
+    [SerializeField] AudioClip openingCutsceneAudio;
     public AudioSource audioSource;
     private void Awake()
     {
@@ -45,6 +46,11 @@ public class Audio : MonoBehaviour
     public void PlayGameOverMusic()
     {
         audioSource.clip = cursedGameOver;
+        audioSource.Play();
+    }
+    public void PlayOpeningCutsceneAudio()
+    {
+        audioSource.clip = openingCutsceneAudio;
         audioSource.Play();
     }
 }

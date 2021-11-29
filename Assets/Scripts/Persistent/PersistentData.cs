@@ -6,6 +6,7 @@ public class PersistentData : MonoBehaviour
 {
     [Header("Options")]
     public bool fromLevelSelect;
+    public bool levelSelectUnlocked;
     public string firstLevel;
     [Header("Progression")]
     public int lastCompletedLevel;

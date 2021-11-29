@@ -18,6 +18,9 @@ public class SceneChangeManager : MonoBehaviour
             case "MainMenu":
                 SceneManager.LoadScene("MainMenu");
                 break;
+            case "OpeningCutscene":
+                SceneManager.LoadScene("OpeningCutscene");
+                break;
             case "Level 1":
                 SceneManager.LoadScene("Level 1");
                 break;

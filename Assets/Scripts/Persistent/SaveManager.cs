@@ -143,6 +143,14 @@ public class SaveManager : MonoBehaviour
         #endregion
         #region OtherSaving
         PlayerPrefs.SetInt("Last Level", persistentData.lastCompletedLevel);
+        if (persistentData.levelSelectUnlocked == false)
+        {
+            PlayerPrefs.SetInt("LevelSelectUnlock", 0);
+        }
+        else if (persistentData.levelSelectUnlocked == true)
+        {
+            PlayerPrefs.SetInt("LevelSelectUnlock", 1);
+        }
         #endregion
     }
     public void ResetSaves()
@@ -163,6 +171,7 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt("4S", 0);
         PlayerPrefs.SetInt("5S", 0);
         PlayerPrefs.SetInt("Last Level", 0);
+        PlayerPrefs.SetInt("LevelSelectUnlock", 0);
     }
     public void LoadSaves()
     {
@@ -182,6 +191,7 @@ public class SaveManager : MonoBehaviour
         int Value4S = PlayerPrefs.GetInt("4S", 0);
         int Value5S = PlayerPrefs.GetInt("5S", 0);
         int ValueLastLevel = PlayerPrefs.GetInt("Last Level", 0);
+        int ValueLevelSelectUnlock = PlayerPrefs.GetInt("LevelSelectUnlock", 0);
         if (Value1P == 1)
         {
             persistentData.level1CompleteWithPistol = true;
@@ -241,6 +251,14 @@ public class SaveManager : MonoBehaviour
         if (Value4R == 1)
         {
             persistentData.level5CompleteWithRifle = true;
+        }
+        if (ValueLevelSelectUnlock == 0)
+        {
+            persistentData.levelSelectUnlocked = false;
+        }
+        if (ValueLevelSelectUnlock == 1)
+        {
+            persistentData.levelSelectUnlocked = true;
         }
         persistentData.lastCompletedLevel = ValueLastLevel;
     }

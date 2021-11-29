@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class OpeningCutsceneController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Audio Audio;
+    public SceneChangeManager sceneChangeManager;
+    void Awake()
     {
-        
+        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
+        Audio = persistentComponents.GetComponent<Audio>();
+        sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator WaitForCutsceneToEnd()
     {
-        
+        yield return new WaitForSeconds(70f);
+        sceneChangeManager.LoadLevel("Level 1");
     }
 }
