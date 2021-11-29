@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject warningMenu;
     public GameObject optionsMenu;
+    public GameObject levelSelectNotUnlocked;
     public PersistentData persistentData;
     public SceneChangeManager sceneChangeManager;
     public SaveManager saveManager;
@@ -46,6 +47,21 @@ public class MainMenu : MonoBehaviour
             Application.Quit();
         #endif
     }
+    public void OpenLevelSelect()
+    {
+        if(persistentData.levelSelectUnlocked == false)
+        {
+            levelSelectNotUnlocked.SetActive(true);
+        }
+        else if (persistentData.levelSelectUnlocked == true)
+        {
+            print("Open Level Select");
+        }
+    }
+    public void GoBack()
+    {
+        levelSelectNotUnlocked.SetActive(false);
+    }
     IEnumerator WaitToGetComponents()
     {
         yield return new WaitForSeconds(0.5f);
@@ -53,5 +69,6 @@ public class MainMenu : MonoBehaviour
         persistentData = persistentComponents.GetComponent<PersistentData>();
         sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
         saveManager = persistentComponents.GetComponent<SaveManager>();
+        saveManager.LoadSaves();
     }
 }

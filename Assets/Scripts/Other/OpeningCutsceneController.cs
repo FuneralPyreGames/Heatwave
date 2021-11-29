@@ -11,6 +11,8 @@ public class OpeningCutsceneController : MonoBehaviour
         GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
         Audio = persistentComponents.GetComponent<Audio>();
         sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
+        Audio.PlayOpeningCutsceneAudio();
+        StartCoroutine(WaitForCutsceneToEnd());
     }
     IEnumerator WaitForCutsceneToEnd()
     {
