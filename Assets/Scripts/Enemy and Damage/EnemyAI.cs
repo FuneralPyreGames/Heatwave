@@ -82,7 +82,6 @@ public class EnemyAI : MonoBehaviour
         {
             attackwalkPointSet = true;
         }
-        print("Attack walk point set");
     }
     void ChasePlayer()
     {
@@ -95,39 +94,31 @@ public class EnemyAI : MonoBehaviour
         {
             enemyGun.Shoot();
             alreadyAttacked = true;
+            NewAfterAttackWalk();
         }
-        AfterAttackWalk();
     }
-    void AfterAttackWalk()
+    void NewAfterAttackWalk()
     {
-        if (!resettingAttack)
+        if(!resettingAttack)
         {
-            print("After attack walk");
-            if (attackwalkPointSet == false)
+            if(!attackwalkPointSet)
             {
-                print("searching for attack walk point");
                 SearchAttackWalkPoint();
             }
-            if (attackwalkPointSet == true)
+            if(attackwalkPointSet)
             {
-                print("Agent destination set");
                 Agent.SetDestination(walkPoint);
+                Vector3 distanceToWalkPoint = transform.position - attackWalkPoint;
+                StartCoroutine(ResetAttack());
             }
-            Vector3 distanceToWalkPoint = transform.position - attackWalkPoint;
-            if (distanceToWalkPoint.magnitude < 1f)
-            {
-                print("Walked to attack");
-                ResetAttack();
-            } 
         }
-        
     }
     IEnumerator ResetAttack()
     {
-        print("Resetting attack");
         resettingAttack = true;
         yield return new WaitForSeconds(timeBetweenAttacks);
         alreadyAttacked = false;
         resettingAttack = false;
+        attackwalkPointSet = false;
     }
 }

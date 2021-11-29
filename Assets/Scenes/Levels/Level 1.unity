@@ -2997,6 +2997,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 16505240}
     m_Modifications:
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: sightRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: attackWalkPointRange
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: m_Name
@@ -3060,7 +3075,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: inaccuracyDistance
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1add3da2e61a7439382756aa4762bdc1, type: 3}
@@ -8797,8 +8812,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
+      propertyPath: sightRange
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: attackRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1.1
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908819, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: m_Speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908819, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
@@ -8880,6 +8915,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 16505240}
     m_Modifications:
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: attackRange
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762909628404908818, guid: 1add3da2e61a7439382756aa4762bdc1,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3762909628404908827, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: m_Name
@@ -8943,7 +8988,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: inaccuracyDistance
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1add3da2e61a7439382756aa4762bdc1, type: 3}
