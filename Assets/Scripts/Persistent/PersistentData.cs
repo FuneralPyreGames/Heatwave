@@ -166,4 +166,73 @@ public class PersistentData : MonoBehaviour
                 break;
         }
     }
+    public int CompletionPercent()
+    {
+        int completionPercent = 0;
+        if (level1CompleteWithPistol == true)
+        {
+            completionPercent += 7;
+        }
+        if (level2CompleteWithPistol == true)
+        {
+            completionPercent += 7;
+        }
+        if (level3CompleteWithPistol == true)
+        {
+            completionPercent += 7;
+        }
+        if (level4CompleteWithPistol == true)
+        {
+            completionPercent += 7;
+        }
+        if (level5CompleteWithPistol == true)
+        {
+            completionPercent += 7;
+        }
+        if (level1CompleteWithShotgun == true)
+        {
+            completionPercent += 7;
+        }
+        if (level2CompleteWithShotgun == true)
+        {
+            completionPercent += 7;
+        }
+        if (level3CompleteWithShotgun == true)
+        {
+            completionPercent += 7;
+        }
+        if (level4CompleteWithShotgun == true)
+        {
+            completionPercent += 7;
+        }
+        if (level5CompleteWithShotgun == true)
+        {
+            completionPercent += 7;
+        }
+        if (level1CompleteWithRifle == true)
+        {
+            completionPercent += 7;
+        }
+        if (level2CompleteWithRifle == true)
+        {
+            completionPercent += 7;
+        }
+        if (level3CompleteWithRifle == true)
+        {
+            completionPercent += 7;
+        }
+        if (level4CompleteWithRifle == true)
+        {
+            completionPercent += 7;
+        }
+        if (level5CompleteWithRifle == true)
+        {
+            completionPercent += 7;
+        }
+        if (completionPercent >= 100)
+        {
+            completionPercent = 100;
+        }
+        return completionPercent;
+    }
 }

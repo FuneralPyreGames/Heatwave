@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -10,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject warningMenu;
     public GameObject optionsMenu;
     public GameObject levelSelectNotUnlocked;
+    public GameObject levelSelect;
     public GameObject creditsMenu;
     public GameObject howToPlay;
     public GameObject howToPlay1;
@@ -18,6 +20,8 @@ public class MainMenu : MonoBehaviour
     public GameObject howToPlay4;
     public GameObject howToPlay5;
     public GameObject howToPlay6;
+    public TextMeshProUGUI completionPercent;
+    public int completionPercentInt;
     public PersistentData persistentData;
     public SceneChangeManager sceneChangeManager;
     public SaveManager saveManager;
@@ -41,11 +45,13 @@ public class MainMenu : MonoBehaviour
     public void StartNewGame()
     {
         persistentData.ResetGame();
+        persistentData.fromLevelSelect = false;
         sceneChangeManager.LoadLevel(persistentData.firstLevel);
     }
     public void LoadGame()
     {
         saveManager.LoadSaves();
+        persistentData.fromLevelSelect = false;
         persistentData.LoadNextLevel();
     }
     public void Quit()
@@ -64,7 +70,11 @@ public class MainMenu : MonoBehaviour
         }
         else if (persistentData.levelSelectUnlocked == true)
         {
-            print("Open Level Select");
+            completionPercentInt = persistentData.CompletionPercent();
+            completionPercent.text = "";
+            completionPercent.text += completionPercentInt;
+            completionPercent.text += "%";
+            levelSelect.SetActive(true);
         }
     }
     public void GoBack()
@@ -129,5 +139,34 @@ public class MainMenu : MonoBehaviour
         howToPlay5.SetActive(false);
         howToPlay6.SetActive(false);
         howToPlay.SetActive(false);
+    }
+    public void CloseLevelSelect()
+    {
+        levelSelect.SetActive(false);
+    }
+    public void LS1()
+    {
+        persistentData.fromLevelSelect = true;
+        sceneChangeManager.LoadLevel("Level 1");
+    }
+    public void LS2()
+    {
+        persistentData.fromLevelSelect = true;
+        sceneChangeManager.LoadLevel("Level 2");
+    }
+    public void LS3()
+    {
+        persistentData.fromLevelSelect = true;
+        sceneChangeManager.LoadLevel("Level 3");
+    }
+    public void LS4()
+    {
+        persistentData.fromLevelSelect = true;
+        sceneChangeManager.LoadLevel("Level 4");
+    }
+    public void LS5()
+    {
+        persistentData.fromLevelSelect = true;
+        sceneChangeManager.LoadLevel("Level 5");
     }
 }
