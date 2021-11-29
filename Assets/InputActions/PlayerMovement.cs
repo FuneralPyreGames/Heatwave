@@ -71,6 +71,15 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""cc355c96-04d8-4787-9f68-bc304e6d1c42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -271,6 +280,28 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""558c269d-bb10-4296-9574-23d5b1696217"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard And Mouse"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c018fdc7-104a-4e6b-825d-9d3627727f89"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -393,6 +424,7 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
         m_Movement_LookX = m_Movement.FindAction("LookX", throwIfNotFound: true);
         m_Movement_LookY = m_Movement.FindAction("LookY", throwIfNotFound: true);
         m_Movement_Sprint = m_Movement.FindAction("Sprint", throwIfNotFound: true);
+        m_Movement_Pause = m_Movement.FindAction("Pause", throwIfNotFound: true);
         // Gunplay
         m_Gunplay = asset.FindActionMap("Gunplay", throwIfNotFound: true);
         m_Gunplay_Shoot = m_Gunplay.FindAction("Shoot", throwIfNotFound: true);
@@ -461,6 +493,7 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
     private readonly InputAction m_Movement_LookX;
     private readonly InputAction m_Movement_LookY;
     private readonly InputAction m_Movement_Sprint;
+    private readonly InputAction m_Movement_Pause;
     public struct MovementActions
     {
         private @PlayerMovement m_Wrapper;
@@ -470,6 +503,7 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
         public InputAction @LookX => m_Wrapper.m_Movement_LookX;
         public InputAction @LookY => m_Wrapper.m_Movement_LookY;
         public InputAction @Sprint => m_Wrapper.m_Movement_Sprint;
+        public InputAction @Pause => m_Wrapper.m_Movement_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -494,6 +528,9 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                 @Sprint.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnSprint;
                 @Sprint.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnSprint;
                 @Sprint.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnSprint;
+                @Pause.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -513,6 +550,9 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                 @Sprint.started += instance.OnSprint;
                 @Sprint.performed += instance.OnSprint;
                 @Sprint.canceled += instance.OnSprint;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -583,6 +623,7 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
         void OnLookX(InputAction.CallbackContext context);
         void OnLookY(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IGunplayActions
     {

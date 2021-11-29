@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] Look look;
     [SerializeField] Gun gun;
     [SerializeField] AmmoHandler ammoHandler;
+    [SerializeField] PauseMenu pauseMenu;
     PlayerMovement.MovementActions movementActions;
     PlayerMovement.GunplayActions gunplayActions;
     Vector2 movementInput;
@@ -25,6 +26,7 @@ public class InputManager : MonoBehaviour
         movementActions.LookY.performed += ctx => lookInput.y = ctx.ReadValue<float>();
         movementActions.Sprint.started += _ => StartSprint();
         movementActions.Sprint.canceled += _ => EndSprint();
+        movementActions.Pause.performed += _ => Pause();
         gunplayActions.Shoot.performed += _ => gun.Shoot();
         gunplayActions.Reload.performed += _ => ammoHandler.Reload();
     }
@@ -49,5 +51,9 @@ public class InputManager : MonoBehaviour
     void OnDisable()
     {
         controls.Disable();
+    }
+    private void Pause()
+    {
+        
     }
 }

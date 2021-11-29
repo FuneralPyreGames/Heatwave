@@ -145,9 +145,11 @@ MonoBehaviour:
     m_Bits: 64
   walkPoint: {x: 0, y: 0, z: 0}
   attackWalkPoint: {x: 0, y: 0, z: 0}
+  resettingAttack: 0
   walkPointRange: 5
   attackWalkPointRange: 3
   timeBetweenAttacks: 0.5
+  rotationSpeed: 3
   sightRange: 40
   attackRange: 10
   playerInSightRange: 0
@@ -169,6 +171,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   hitEffect: {fileID: 100002, guid: 99c73c92ac40473459640b165473206f, type: 3}
+  Audio: {fileID: 0}
 --- !u!1 &3762909628691544030
 GameObject:
   m_ObjectHideFlags: 0

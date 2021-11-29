@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     public float walkPointRange;
     public float attackWalkPointRange;
     public float timeBetweenAttacks;
+    public float rotationSpeed = 10f;
     bool alreadyAttacked;
     public float sightRange;
     public float attackRange;
@@ -89,9 +90,11 @@ public class EnemyAI : MonoBehaviour
     }
     void AttackPlayer()
     {
-        transform.LookAt(Player);
         if (!alreadyAttacked)
-        {
+        {               
+            Vector3 _direction = Player.position - transform.position;
+            Quaternion _lookRotation = Quaternion.LookRotation(_direction);
+            transform.rotation = Quaternion.Slerp(_lookRotation, transform.rotation, Time.deltaTime * rotationSpeed);
             enemyGun.Shoot();
             alreadyAttacked = true;
             NewAfterAttackWalk();
