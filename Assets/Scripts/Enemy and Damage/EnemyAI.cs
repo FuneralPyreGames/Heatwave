@@ -10,8 +10,12 @@ public class EnemyAI : MonoBehaviour
     public LayerMask playerLayer;
     public LayerMask groundLayer;
     public Vector3 walkPoint;
+    public Vector3 attackWalkPoint;
+    public bool resettingAttack = false;
     bool walkPointSet;
+    bool attackwalkPointSet;
     public float walkPointRange;
+    public float attackWalkPointRange;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public float sightRange;
@@ -51,7 +55,6 @@ public class EnemyAI : MonoBehaviour
         if (walkPointSet == true)
         {
             Agent.SetDestination(walkPoint);
-            
         }
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
         if (distanceToWalkPoint.magnitude < 1f)
@@ -69,23 +72,62 @@ public class EnemyAI : MonoBehaviour
             walkPointSet = true;
         }
     }
+    void SearchAttackWalkPoint()
+    {
+        float randomZ = Random.Range(-attackWalkPointRange, attackWalkPointRange);
+        float randomx = Random.Range(-attackWalkPointRange, attackWalkPointRange);
+        attackWalkPoint = new Vector3(transform.position.x + randomx, transform.position.y, transform.position.z + randomZ);
+        print(attackWalkPoint);
+        if (Physics.Raycast(walkPoint, -transform.up, 2f, groundLayer))
+        {
+            attackwalkPointSet = true;
+        }
+        print("Attack walk point set");
+    }
     void ChasePlayer()
     {
         Agent.SetDestination(Player.position);
     }
     void AttackPlayer()
     {
-        Agent.SetDestination(transform.position);
         transform.LookAt(Player);
         if (!alreadyAttacked)
         {
             enemyGun.Shoot();
             alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+        AfterAttackWalk();
     }
-    void ResetAttack()
+    void AfterAttackWalk()
     {
+        if (!resettingAttack)
+        {
+            print("After attack walk");
+            if (attackwalkPointSet == false)
+            {
+                print("searching for attack walk point");
+                SearchAttackWalkPoint();
+            }
+            if (attackwalkPointSet == true)
+            {
+                print("Agent destination set");
+                Agent.SetDestination(walkPoint);
+            }
+            Vector3 distanceToWalkPoint = transform.position - attackWalkPoint;
+            if (distanceToWalkPoint.magnitude < 1f)
+            {
+                print("Walked to attack");
+                ResetAttack();
+            } 
+        }
+        
+    }
+    IEnumerator ResetAttack()
+    {
+        print("Resetting attack");
+        resettingAttack = true;
+        yield return new WaitForSeconds(timeBetweenAttacks);
         alreadyAttacked = false;
+        resettingAttack = false;
     }
 }

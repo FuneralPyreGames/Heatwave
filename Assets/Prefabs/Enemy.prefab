@@ -144,8 +144,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   walkPoint: {x: 0, y: 0, z: 0}
+  attackWalkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1.1
+  attackWalkPointRange: 3
+  timeBetweenAttacks: 0.5
   sightRange: 40
   attackRange: 10
   playerInSightRange: 0
@@ -287,15 +289,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dceeadf1e832439faf0626dbba4b9e2, type: 3}
---- !u!1 &4105562739466945130 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7dceeadf1e832439faf0626dbba4b9e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 3762909628574007099}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3725096070086236368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7dceeadf1e832439faf0626dbba4b9e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3762909628574007099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4105562739466945130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7dceeadf1e832439faf0626dbba4b9e2,
     type: 3}
   m_PrefabInstance: {fileID: 3762909628574007099}
   m_PrefabAsset: {fileID: 0}
