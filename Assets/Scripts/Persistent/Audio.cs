@@ -11,6 +11,8 @@ public class Audio : MonoBehaviour
     [SerializeField] AudioClip theTeenageGeneration;
     [SerializeField] AudioClip cursedGameOver;
     [SerializeField] AudioClip openingCutsceneAudio;
+    [SerializeField] AudioClip missionBriefingSong;
+    [SerializeField] AudioClip mainMenuSong;
     [SerializeField] AudioClip somethingBrokenSFX;
     [SerializeField] AudioClip enemyHitSFX;
     [SerializeField] AudioClip playerHitSFX;
@@ -56,6 +58,11 @@ public class Audio : MonoBehaviour
     public void PlayOpeningCutsceneAudio()
     {
         audioSource.clip = openingCutsceneAudio;
+        audioSource.Play();
+    }
+    public void PlayMainMenuMusic()
+    {
+        audioSource.clip = mainMenuSong;
         audioSource.Play();
     }
     public void PlaySomethingBrokenSFX()

@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     public PersistentData persistentData;
     public SceneChangeManager sceneChangeManager;
     public SaveManager saveManager;
+    public Audio Audio;
     public void Awake()
     {
         StartCoroutine(WaitToGetComponents());
@@ -70,6 +71,8 @@ public class MainMenu : MonoBehaviour
         persistentData = persistentComponents.GetComponent<PersistentData>();
         sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
         saveManager = persistentComponents.GetComponent<SaveManager>();
+        Audio = persistentComponents.GetComponent<Audio>();
+        Audio.PlayMainMenuMusic();
         saveManager.LoadSaves();
     }
     public void OpenCredits()
