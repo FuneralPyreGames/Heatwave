@@ -9,6 +9,7 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] float gravity = -9.81f;
     [SerializeField] float jumpHeight = 3f;
     [SerializeField] LayerMask groundMask;
+    [SerializeField] Audio Audio;
     Vector2 movementInput;
     Vector3 verticalVelocity = Vector3.zero;
     bool isGrounded;
@@ -30,6 +31,7 @@ public class MovePlayer : MonoBehaviour
         {
             if (isGrounded)
             {
+                Audio.PlayJumpSFX();
                 verticalVelocity.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
             }
             Jump = false;

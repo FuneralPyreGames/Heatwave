@@ -8,12 +8,15 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]float currentHealth;
     [SerializeField]UIManager uIManager;
     [SerializeField]GameObject deathUI;
+    [SerializeField] Audio Audio;
     void Awake()
     {
         currentHealth = maxHealth;
+        Audio = GameObject.Find("PersistentComponents(Clone)").GetComponent<Audio>();
     }
     public void LoseHealth(float healthToLose)
     {
+        Audio.PlayPlayerHitSFX();
         currentHealth -= healthToLose;
         uIManager.UpdateHealthText(currentHealth);
         if (currentHealth <= 0)

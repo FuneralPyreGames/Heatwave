@@ -11,6 +11,11 @@ public class Audio : MonoBehaviour
     [SerializeField] AudioClip theTeenageGeneration;
     [SerializeField] AudioClip cursedGameOver;
     [SerializeField] AudioClip openingCutsceneAudio;
+    [SerializeField] AudioClip somethingBrokenSFX;
+    [SerializeField] AudioClip enemyHitSFX;
+    [SerializeField] AudioClip playerHitSFX;
+    [SerializeField] AudioClip jumpSFX;
+
     public AudioSource audioSource;
     private void Awake()
     {
@@ -52,5 +57,21 @@ public class Audio : MonoBehaviour
     {
         audioSource.clip = openingCutsceneAudio;
         audioSource.Play();
+    }
+    public void PlaySomethingBrokenSFX()
+    {
+        audioSource.PlayOneShot(somethingBrokenSFX);
+    }
+    public void PlayEnemyHitSFX()
+    {
+        audioSource.PlayOneShot(enemyHitSFX);
+    }
+    public void PlayPlayerHitSFX()
+    {
+        audioSource.PlayOneShot(playerHitSFX);
+    }
+    public void PlayJumpSFX()
+    {
+        audioSource.PlayOneShot(jumpSFX);
     }
 }

@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public GameObject warningMenu;
     public GameObject optionsMenu;
     public GameObject levelSelectNotUnlocked;
+    public GameObject creditsMenu;
     public PersistentData persistentData;
     public SceneChangeManager sceneChangeManager;
     public SaveManager saveManager;
@@ -70,5 +71,13 @@ public class MainMenu : MonoBehaviour
         sceneChangeManager = persistentComponents.GetComponent<SceneChangeManager>();
         saveManager = persistentComponents.GetComponent<SaveManager>();
         saveManager.LoadSaves();
+    }
+    public void OpenCredits()
+    {
+        creditsMenu.SetActive(true);
+    }
+    public void CloseCredits()
+    {
+        creditsMenu.SetActive(false);
     }
 }

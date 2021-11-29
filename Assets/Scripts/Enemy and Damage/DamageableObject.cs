@@ -7,9 +7,11 @@ public class DamageableObject : MonoBehaviour
     [SerializeField] float maxHealth = 100f;
     [SerializeField] float currentHealth;
     [SerializeField] GameObject hitEffect;
+    [SerializeField] Audio Audio;
     void Awake()
     {
         currentHealth = maxHealth;
+        Audio = GameObject.Find("PersistentComponents(Clone)").GetComponent<Audio>();
     }
     public void TakeDamage(float Damage, Vector3 hitPos, Vector3 hitNormal)
     {
@@ -22,7 +24,7 @@ public class DamageableObject : MonoBehaviour
     }
     void Die()
     {
-        print(name + " was destroyed!");
+        Audio.PlaySomethingBrokenSFX();
         Destroy(gameObject);
     }
 }
