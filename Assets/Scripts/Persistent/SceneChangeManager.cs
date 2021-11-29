@@ -21,6 +21,9 @@ public class SceneChangeManager : MonoBehaviour
             case "OpeningCutscene":
                 SceneManager.LoadScene("OpeningCutscene");
                 break;
+            case "YouWin":
+                SceneManager.LoadScene("You Win");
+                break;
             case "Level 1":
                 SceneManager.LoadScene("Level 1");
                 break;
