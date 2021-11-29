@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using TMPro;
 
 public class OptionsMenu : MonoBehaviour
@@ -9,9 +10,10 @@ public class OptionsMenu : MonoBehaviour
     public GameObject exitButton;
     public GameObject audioSubmenu;
     public GameObject graphicsSubmenu;
-    public GameObject gameplaySubmenu;
     public TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
+    public AudioMixer audioMixer;
+    int volvol;
     void Start()
     {
         resolutions = Screen.resolutions;
@@ -67,14 +69,8 @@ public class OptionsMenu : MonoBehaviour
         exitButton.SetActive(true);
         graphicsSubmenu.SetActive(false);
     }
-    public void OpenGameplaySubmenu()
-    {
-        exitButton.SetActive(false);
-        gameplaySubmenu.SetActive(true);
-    }
-    public void CloseGameplaySubmenu()
-    {   
-        exitButton.SetActive(true);
-        gameplaySubmenu.SetActive(false);
+    public void SetVolume(float volume){
+        audioMixer.SetFloat("Volume", volume);
+        volume = volvol;
     }
 }
