@@ -13,6 +13,7 @@ public class Audio : MonoBehaviour
     [SerializeField] AudioClip openingCutsceneAudio;
     [SerializeField] AudioClip missionBriefingSong;
     [SerializeField] AudioClip mainMenuSong;
+    [SerializeField] AudioClip gunfireSFX;
     [SerializeField] AudioClip somethingBrokenSFX;
     [SerializeField] AudioClip enemyHitSFX;
     [SerializeField] AudioClip playerHitSFX;
@@ -80,6 +81,10 @@ public class Audio : MonoBehaviour
     public void PlayJumpSFX()
     {
         audioSource.PlayOneShot(jumpSFX);
+    }
+    public void PlayGunfireSFX()
+    {
+        audioSource.PlayOneShot(gunfireSFX);
     }
     public void PlayMissionBriefingMusic()
     {

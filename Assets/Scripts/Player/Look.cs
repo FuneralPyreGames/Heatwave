@@ -11,8 +11,13 @@ public class Look : MonoBehaviour
     float LookX;
     float LookY;
     [SerializeField] Transform playerCamera;
+    public PersistentData persistentData;
     void Awake()
     {
+        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
+        persistentData = persistentComponents.GetComponent<PersistentData>();
+        sensitivityX = persistentData.xSensitivity;
+        sensitivityY = persistentData.ySensitivity;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

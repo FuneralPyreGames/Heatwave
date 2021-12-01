@@ -19,6 +19,7 @@ public class Gun : MonoBehaviour
     [SerializeField] PlayerDataController playerDataController;
     [SerializeField] Transform muzzle;
     [SerializeField] AmmoHandler ammoHandler;
+    [SerializeField] Audio Audio;
     [Header("Not In Inspector")]
     Transform playerCamera;
     #endregion
@@ -28,12 +29,15 @@ public class Gun : MonoBehaviour
         playerCamera = Camera.main.transform;
         ammoHandler.currentCarryAmmo = ammoHandler.startingCarryAmmo;
         ammoHandler.currentInGunAmmo = ammoHandler.startingInGunAmmo;
+        GameObject persistentComponents = GameObject.Find("PersistentComponents(Clone)");
+        Audio = persistentComponents.GetComponent<Audio>();
     }
     public void Shoot()
     {
         bool ableToShoot = ammoHandler.CheckAmmo();
         if (ableToShoot)
         {
+            Audio.PlayGunfireSFX();
             //This looks at what gun type the player has chose, and forwards them to the correct function for shooting
             if (gunSelection == 0)
             {

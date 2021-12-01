@@ -59,6 +59,7 @@ MonoBehaviour:
     type: 3}
   missionBriefingSong: {fileID: 8300000, guid: 9a2143659f78845ea83f32b5124c7ec2, type: 3}
   mainMenuSong: {fileID: 8300000, guid: 9cd0570c6f6ca40269532f882489d036, type: 3}
+  gunfireSFX: {fileID: 8300000, guid: 96fab33f558f3674a94e9a5134fd54f8, type: 3}
   somethingBrokenSFX: {fileID: 8300000, guid: 26aeac46d560d49a885ff92fb612298d, type: 3}
   enemyHitSFX: {fileID: 8300000, guid: c2c9d5192344046f9a1d86ba405566b0, type: 3}
   playerHitSFX: {fileID: 8300000, guid: f6511e8cb04c242bf925575f9d535de7, type: 3}
@@ -79,6 +80,8 @@ MonoBehaviour:
   fromLevelSelect: 0
   levelSelectUnlocked: 0
   firstLevel: OpeningCutscene
+  xSensitivity: 100
+  ySensitivity: 0.5
   lastCompletedLevel: 0
   level1CompleteWithPistol: 0
   level1CompleteWithShotgun: 0

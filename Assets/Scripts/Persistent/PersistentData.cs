@@ -8,6 +8,8 @@ public class PersistentData : MonoBehaviour
     public bool fromLevelSelect;
     public bool levelSelectUnlocked;
     public string firstLevel;
+    public float xSensitivity;
+    public float ySensitivity;
     [Header("Progression")]
     public int lastCompletedLevel;
     [Header("Level 1")]
