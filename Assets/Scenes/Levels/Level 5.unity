@@ -323,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: Damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
@@ -856,7 +856,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: Damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
@@ -3271,7 +3271,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: Damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
@@ -13270,11 +13270,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
-      propertyPath: Damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
-        type: 3}
       propertyPath: inaccuracyDistance
       value: 2
       objectReference: {fileID: 0}
@@ -14506,7 +14501,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: Damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
@@ -14621,7 +14616,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: Damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
@@ -15939,7 +15934,7 @@ PrefabInstance:
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
       propertyPath: Damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3762909628574007102, guid: 1add3da2e61a7439382756aa4762bdc1,
         type: 3}
