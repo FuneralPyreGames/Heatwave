@@ -786,7 +786,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 175
   m_TargetDisplay: 0
 --- !u!114 &1079930083183580575
 MonoBehaviour:
@@ -6324,6 +6324,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   persistentData: {fileID: 0}
   sceneChangeManager: {fileID: 0}
+  saveManager: {fileID: 0}
+  gun: {fileID: 0}
   currentLevel: 1
   levelEndScreen: {fileID: 5303116556977532171}
   notLevelSelectText: {fileID: 1372564169737695488}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8393090486192816321}
   - component: {fileID: 8393090486192816334}
   - component: {fileID: 963277742060450139}
+  - component: {fileID: 433428494239922187}
   m_Layer: 0
   m_Name: Cold 3
   m_TagString: HeatSetters
@@ -111,3 +112,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHeat: -3
+--- !u!114 &433428494239922187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393090486192816332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 0
+  priority: 0
+  blendDistance: 0
+  weight: 0.3
+  sharedProfile: {fileID: 11400000, guid: dd0edc786e5a9c241891778c81cfdd83, type: 2}
