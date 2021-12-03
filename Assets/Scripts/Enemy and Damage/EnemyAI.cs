@@ -78,7 +78,6 @@ public class EnemyAI : MonoBehaviour
         float randomZ = Random.Range(-attackWalkPointRange, attackWalkPointRange);
         float randomx = Random.Range(-attackWalkPointRange, attackWalkPointRange);
         attackWalkPoint = new Vector3(transform.position.x + randomx, transform.position.y, transform.position.z + randomZ);
-        print(attackWalkPoint);
         if (Physics.Raycast(walkPoint, -transform.up, 2f, groundLayer))
         {
             attackwalkPointSet = true;

@@ -18,8 +18,6 @@ public class PlayerDataController : MonoBehaviour
         {
             HeatSetter hs = other.GetComponent<HeatSetter>();
             currentHeat = hs.currentHeat;
-            print(currentHeat);
         }
-
     }
 }

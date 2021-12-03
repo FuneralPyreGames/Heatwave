@@ -15,7 +15,7 @@ C:/Unity Projects/Heatwave
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-61441
+61674
 Successfully changed project path to: C:/Unity Projects/Heatwave
 C:/Unity Projects/Heatwave
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Unity Projects/Heatwave
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 97.88 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 96.22 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.5f1 (4ec9a5e799f5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.5f1/Editor/Data/Resources/UnitySubsystems
@@ -65,35 +65,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56428
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56372
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003910 seconds.
+Registered in 0.004791 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 97.07 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 92.18 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.533 seconds
+- Completed reload, in  0.523 seconds
 Domain Reload Profiling:
-	ReloadAssembly (533ms)
-		BeginReloadAssembly (56ms)
+	ReloadAssembly (523ms)
+		BeginReloadAssembly (57ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (415ms)
-			LoadAssemblies (54ms)
+		EndReloadAssembly (403ms)
+			LoadAssemblies (55ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (90ms)
+			SetupTypeCache (83ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (259ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (256ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (13ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (97ms)
+				RefreshPlugins (92ms)
 				BeforeProcessingInitializeOnLoad (1ms)
 				ProcessInitializeOnLoadAttributes (114ms)
 				ProcessInitializeOnLoadMethodAttributes (35ms)
@@ -103,37 +105,38 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005859 seconds.
+Registered in 0.008906 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\Heatwave\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\Heatwave\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 97.20 ms, found 3 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 95.57 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.827 seconds
+- Completed reload, in  1.819 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1828ms)
-		BeginReloadAssembly (137ms)
+	ReloadAssembly (1820ms)
+		BeginReloadAssembly (140ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (1614ms)
-			LoadAssemblies (112ms)
+		EndReloadAssembly (1602ms)
+			LoadAssemblies (94ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (225ms)
+			SetupTypeCache (224ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (1140ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (1147ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (97ms)
+				RefreshPlugins (96ms)
 				BeforeProcessingInitializeOnLoad (92ms)
-				ProcessInitializeOnLoadAttributes (897ms)
-				ProcessInitializeOnLoadMethodAttributes (39ms)
+				ProcessInitializeOnLoadAttributes (906ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -144,12 +147,12 @@ Worker process is ready to serve import requests
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5700 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 157 unused Assets / (0.7 MB). Loaded Objects now: 6133.
-Memory consumption went from 234.7 MB to 233.9 MB.
-Total: 4.057200 ms (FindLiveObjects: 0.437600 ms CreateObjectMapping: 0.451400 ms MarkObjects: 2.748200 ms  DeleteObjects: 0.419200 ms)
+Unloading 157 unused Assets / (481.7 KB). Loaded Objects now: 6133.
+Memory consumption went from 234.3 MB to 233.8 MB.
+Total: 4.678700 ms (FindLiveObjects: 0.444300 ms CreateObjectMapping: 0.359900 ms MarkObjects: 3.487900 ms  DeleteObjects: 0.385800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,28 +166,97 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1731.359248 seconds.
-  path: Assets/Scenes/Levels/Level 1.unity
-  artifactKey: Guid(06dfd08c22d0d994cae822745b83cbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Levels/Level 1.unity using Guid(06dfd08c22d0d994cae822745b83cbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5dbf1035b9f45cf2efff7858e0484a0') in 0.009398 seconds 
+  Time since last request: 3896.335471 seconds.
+  path: Assets/Audio/Songs/MissionBriefingSong.wav
+  artifactKey: Guid(9a2143659f78845ea83f32b5124c7ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Songs/MissionBriefingSong.wav using Guid(9a2143659f78845ea83f32b5124c7ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16f151f8bc26ee73473534962ab827d') in 0.075174 seconds 
 ========================================================================
-Received Prepare
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 4.19 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (0.7 MB). Loaded Objects now: 6133.
-Memory consumption went from 111.1 MB to 110.4 MB.
-Total: 3.839600 ms (FindLiveObjects: 0.430600 ms CreateObjectMapping: 0.375000 ms MarkObjects: 2.768500 ms  DeleteObjects: 0.264700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Audio/SFX/Jump.wav
+  artifactKey: Guid(167694e62630348739c4c0661878a8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/SFX/Jump.wav using Guid(167694e62630348739c4c0661878a8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef1cf005f53ac71d655be65b3fceecad') in 0.006950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Audio/Songs/Piles of Snow Instrumental.wav
+  artifactKey: Guid(79de01af11dcd0a43b8b61091f271936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Songs/Piles of Snow Instrumental.wav using Guid(79de01af11dcd0a43b8b61091f271936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7228cf4ce679c490f6022b6bd5c5524') in 0.007542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Audio/SFX/SomethingBroken.wav
+  artifactKey: Guid(26aeac46d560d49a885ff92fb612298d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/SFX/SomethingBroken.wav using Guid(26aeac46d560d49a885ff92fb612298d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27a958809bc92fb80a9bb3fe1d58affa') in 0.010053 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Audio/AudioMixer/Master.mixer
+  artifactKey: Guid(dec1650e1883848faa9bbd09114be7d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/AudioMixer/Master.mixer using Guid(dec1650e1883848faa9bbd09114be7d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef088cedf9ebf697344650773c6855c7') in 0.003146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Audio/SFX/GUN_FIRE-GoodSoundForYou-820112263.wav
+  artifactKey: Guid(96fab33f558f3674a94e9a5134fd54f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/SFX/GUN_FIRE-GoodSoundForYou-820112263.wav using Guid(96fab33f558f3674a94e9a5134fd54f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13e2cc2b332b1bb8270981fa486a14d2') in 0.028768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Audio/Songs/Down With The Ship Instrumental.wav
+  artifactKey: Guid(448c92aec77cbbc44bdd18f03adc8d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Songs/Down With The Ship Instrumental.wav using Guid(448c92aec77cbbc44bdd18f03adc8d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adc6bb026d4a735d03ed222870c02866') in 0.006485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Audio/SFX/EnemyHit.wav
+  artifactKey: Guid(c2c9d5192344046f9a1d86ba405566b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/SFX/EnemyHit.wav using Guid(c2c9d5192344046f9a1d86ba405566b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae6e53cddc6af27c44164f0b89900a3d') in 0.005943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Audio/SFX/PlayerHit.wav
+  artifactKey: Guid(f6511e8cb04c242bf925575f9d535de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/SFX/PlayerHit.wav using Guid(f6511e8cb04c242bf925575f9d535de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef4f2d4f1a922146b7b47e6a698e6e66') in 0.006062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Audio/Songs/MainMenuSong.wav
+  artifactKey: Guid(9cd0570c6f6ca40269532f882489d036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Songs/MainMenuSong.wav using Guid(9cd0570c6f6ca40269532f882489d036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21614c70eed04c3ab625301b952d3276') in 0.007164 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Audio/Songs/Vehicular Combat Instrumental.wav
+  artifactKey: Guid(24724db61a2680d4b87e2f0d42368301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Songs/Vehicular Combat Instrumental.wav using Guid(24724db61a2680d4b87e2f0d42368301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4652bf96f5072dd7a9edb1ae0427c316') in 0.007575 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Audio/Songs/Disgusting Game Over Song.wav
+  artifactKey: Guid(8ea25e109000940b29b78c7b3658b21c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Songs/Disgusting Game Over Song.wav using Guid(8ea25e109000940b29b78c7b3658b21c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f4dedd35e34a73e710bbfa91f00d0f5') in 0.008380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Audio/Songs/The Teenage Generation Instrumental.wav
+  artifactKey: Guid(5a2de4f432e39a84898b54ad2432c0bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Songs/The Teenage Generation Instrumental.wav using Guid(5a2de4f432e39a84898b54ad2432c0bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51f69b5cbae61378898185146b3db21') in 0.008201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Audio/Songs/Stardust Instrumental.wav
+  artifactKey: Guid(28fd158912757794a8ceadd2a9606731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Songs/Stardust Instrumental.wav using Guid(28fd158912757794a8ceadd2a9606731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d141d88e01cc715cd02f01fc0e292eb') in 0.007715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Editor/This would have been better.txt
+  artifactKey: Guid(58b585ee566333b48978774a3e0233df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/This would have been better.txt using Guid(58b585ee566333b48978774a3e0233df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2d07a203bd6902defa87ca573f0bc72') in 0.004228 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.963707 seconds.
+  path: Assets/Prefabs/Enemy.prefab
+  artifactKey: Guid(1add3da2e61a7439382756aa4762bdc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy.prefab using Guid(1add3da2e61a7439382756aa4762bdc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764548868c427ce0e6b78b277ba0c6c1') in 1.167108 seconds 
