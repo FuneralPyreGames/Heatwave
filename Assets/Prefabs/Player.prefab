@@ -473,6 +473,7 @@ MonoBehaviour:
   look: {fileID: 3956212761304785414}
   gun: {fileID: 3956212762304459727}
   ammoHandler: {fileID: 3956212762304459696}
+  pauseMenu: {fileID: 0}
 --- !u!114 &3956212761304785412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +510,7 @@ MonoBehaviour:
   sensitivityY: 0.5
   xClamp: 85
   playerCamera: {fileID: 3956212762561980602}
+  persistentData: {fileID: 0}
 --- !u!114 &3956212761304785415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,7 +672,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8875648427226801698}
   m_Father: {fileID: 613173171819329452}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -881,7 +884,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1290831482673463548}
   m_Father: {fileID: 613173171819329452}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1087,17 +1091,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6389530906418861080}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 613173171819329452}
-  m_RootOrder: 3
+  m_Father: {fileID: 7205952485050578655}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750.5, y: -372}
+  m_AnchoredPosition: {x: -0.4996338, y: 3}
   m_SizeDelta: {x: 900, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5536457679495804539
@@ -1226,7 +1230,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 439246477339032262}
   m_Father: {fileID: 613173171819329452}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1308,9 +1313,6 @@ RectTransform:
   - {fileID: 7205952485050578655}
   - {fileID: 2471902435174468172}
   - {fileID: 6413220476735381126}
-  - {fileID: 1290831482673463548}
-  - {fileID: 439246477339032262}
-  - {fileID: 8875648427226801698}
   m_Father: {fileID: 3956212761304785410}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1903,17 +1905,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8803129077775927572}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 613173171819329452}
-  m_RootOrder: 5
+  m_Father: {fileID: 6413220476735381126}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -153.6, y: -370.9}
+  m_AnchoredPosition: {x: -3.5998688, y: 4.1000366}
   m_SizeDelta: {x: 900, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &425173001687915158
@@ -2172,17 +2174,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8941803620131749267}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 613173171819329452}
-  m_RootOrder: 4
+  m_Father: {fileID: 2471902435174468172}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -453.1, y: -370.5}
+  m_AnchoredPosition: {x: -3.099823, y: 4.5}
   m_SizeDelta: {x: 900, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5452943380370013790
@@ -2434,3 +2436,4 @@ MonoBehaviour:
   playerDataController: {fileID: 3956212761304785415}
   muzzle: {fileID: 3956212761122493489}
   ammoHandler: {fileID: 3956212762304459696}
+  Audio: {fileID: 0}
