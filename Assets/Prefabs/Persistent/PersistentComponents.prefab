@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7175928581190689575}
   - component: {fileID: 7175928581190689563}
+  - component: {fileID: 7175928581190689574}
   - component: {fileID: 7175928581190689572}
   - component: {fileID: 7175928581190689573}
-  - component: {fileID: 7175928581190689574}
   - component: {fileID: -6746227764861563221}
   m_Layer: 0
   m_Name: PersistentComponents
@@ -65,51 +65,6 @@ MonoBehaviour:
   playerHitSFX: {fileID: 8300000, guid: f6511e8cb04c242bf925575f9d535de7, type: 3}
   jumpSFX: {fileID: 8300000, guid: 167694e62630348739c4c0661878a8af, type: 3}
   audioSource: {fileID: 7175928581190689574}
---- !u!114 &7175928581190689572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7175928581190689568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9622ed8908b8e9c4eb3cae35ea8ca8c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fromLevelSelect: 0
-  levelSelectUnlocked: 0
-  firstLevel: OpeningCutscene
-  xSensitivity: 100
-  ySensitivity: 0.5
-  lastCompletedLevel: 0
-  level1CompleteWithPistol: 0
-  level1CompleteWithShotgun: 0
-  level1CompleteWithRifle: 0
-  level2CompleteWithPistol: 0
-  level2CompleteWithShotgun: 0
-  level2CompleteWithRifle: 0
-  level3CompleteWithPistol: 0
-  level3CompleteWithShotgun: 0
-  level3CompleteWithRifle: 0
-  level4CompleteWithPistol: 0
-  level4CompleteWithShotgun: 0
-  level4CompleteWithRifle: 0
-  level5CompleteWithPistol: 0
-  level5CompleteWithShotgun: 0
-  level5CompleteWithRifle: 0
---- !u!114 &7175928581190689573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7175928581190689568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b58d7bb997611254880295ff974d62c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &7175928581190689574
 AudioSource:
   m_ObjectHideFlags: 0
@@ -207,6 +162,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7175928581190689572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7175928581190689568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9622ed8908b8e9c4eb3cae35ea8ca8c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fromLevelSelect: 0
+  levelSelectUnlocked: 0
+  firstLevel: OpeningCutscene
+  xSensitivity: 100
+  ySensitivity: 0.5
+  lastCompletedLevel: 0
+  level1CompleteWithPistol: 0
+  level1CompleteWithShotgun: 0
+  level1CompleteWithRifle: 0
+  level2CompleteWithPistol: 0
+  level2CompleteWithShotgun: 0
+  level2CompleteWithRifle: 0
+  level3CompleteWithPistol: 0
+  level3CompleteWithShotgun: 0
+  level3CompleteWithRifle: 0
+  level4CompleteWithPistol: 0
+  level4CompleteWithShotgun: 0
+  level4CompleteWithRifle: 0
+  level5CompleteWithPistol: 0
+  level5CompleteWithShotgun: 0
+  level5CompleteWithRifle: 0
+--- !u!114 &7175928581190689573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7175928581190689568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58d7bb997611254880295ff974d62c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-6746227764861563221
 MonoBehaviour:
   m_ObjectHideFlags: 0
